@@ -7,21 +7,28 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap" rel="stylesheet"> 
     <title>Julia's Portal</title>
 </head>
 
 <body>
     
     <header>
-        <h1>Julia Ma</h1>
+        
         
         <div id="banner">
-            <div id="display"></div>
+            <div id="display">
+                <div class="bubble pointer">
+                    <h1>Julia's Portal</h1>
+                </div>
+            </div>
             <div id="activity-row">
-                <div id="dots-container"> 
-                    <div class="dots" id="left"></div>
-                    <div class="dots" id="middle"></div>
-                    <div class="dots" id="right"></div>
+                <div id="icons-container"> 
+                    <div class="dots" id="left-icon"><img src="images/gummy.png" alt="gummy bear icon"></div>
+                    <div class="dots" id="middle-icon"><img src="images/bracket.png" alt="curly brackets around a heart icon"></div>
+                    <div class="dots" id="right-icon"><img src="images/sakura.png" alt="sakura flower icon"></div>
                 </div>
                 <div id="send-bar">
                     <h2>DES 157A - Interactive Media II - Fall 2021</h2>
@@ -31,7 +38,7 @@
     </header>
 
     <main>
-        <section>
+        <section id="sec-left">
             <h2>studios</h2>
             <ul>
                 <li><a href="#">Mad Libs 2.0</a></li>
@@ -62,7 +69,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="sec-right">
             <h2>final</h2>
             <ul>
                 <li><a href="#">Final Project</a></li>
