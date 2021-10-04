@@ -150,6 +150,7 @@ main section {
     background-color: floralwhite;
     width: 30%;
     padding-left: 20px;
+    padding-bottom: 10px;
 }
 
 main #sec-left:hover {
@@ -179,10 +180,10 @@ main #sec-middle:hover {
 }
 
 main #sec-right:hover {
-    animation: colorchange 3.5s ease-in-out infinite alternate;
+    animation: colorchange3 3.5s ease-in-out infinite alternate;
 }
 
-@keyframes colorchange {
+@keyframes colorchange3 {
     from {
         background-color: floralwhite;
     }
@@ -204,9 +205,52 @@ ul li a {
     color: darkslategray; 
 }
 
-ul li a:hover {
-    background-color: floralwhite;
+#sec-left ul li a:hover {
     border: 4px solid floralwhite;
+    animation: bgfade1 2s ease-in-out infinite alternate;
+}
+
+@keyframes bgfade1 {
+    from {
+        background-color: thistle;
+        border: 4px solid thistle;
+    }
+    to {
+        background-color: floralwhite;
+        border: 4px solid floralwhite;
+    }
+}
+
+#sec-middle ul li a:hover {
+    border: 4px solid floralwhite;
+    animation: bgfade2 2s ease-in-out infinite alternate;
+}
+
+@keyframes bgfade2 {
+    from {
+        background-color: rgb(243, 200, 91);
+        border: 4px solid rgb(243, 200, 91);
+    }
+    to {
+        background-color: floralwhite;
+        border: 4px solid floralwhite;
+    }
+}
+
+#sec-right ul li a:hover {
+    border: 4px solid floralwhite;
+    animation: bgfade3 2s ease-in-out infinite alternate;
+}
+
+@keyframes bgfade3 {
+    from {
+        background-color: rgb(168, 187, 132);
+        border: 4px solid rgb(168, 187, 132);
+    }
+    to {
+        background-color: floralwhite;
+        border: 4px solid floralwhite;
+    }
 }
 
 /* footer CSS starts here */
