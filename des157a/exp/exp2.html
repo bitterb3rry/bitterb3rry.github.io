@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXP 2</title>
+    <style>
+        div {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>A FizzBuzz Counter</h2>
+    <div></div>
+
+<!--from 1 -> number user inputed: 
+    FizzBuzz will output if the number is both divisible by 3 and 5
+    Fizz will output if the number is divisible by 3 only
+    Buzz will output if the number is divisible by 5 only
+    the number will out if the number is not divisible by any conbination above -->
+
+    <script>
+        function createFizzBuzzNode(num) {
+            var output;
+            var display = document.querySelector('div');
+            if (num%3 == 0 && num%5 == 0) {
+                output = document.createTextNode('FizzBuzz');
+                display.style.backgroundColor = 'indigo';
+                display.style.color = 'ghostwhite';
+            } else if (num%3 == 0) {
+                output = document.createTextNode('Fizz');
+                display.style.backgroundColor = 'darkblue';
+                display.style.color = 'ghostwhite';
+            } else if (num%5 == 0) {
+                output = document.createTextNode('Buzz');
+                display.style.backgroundColor = 'red';
+                display.style.color = 'ghostwhite';
+            } else {
+                output = document.createTextNode(num);
+                display.style.backgroundColor = 'ghostwhite';
+                display.style.color = 'black';
+            }
+            return output;
+        }
+
+        var counter = 1;
+        function fizzBuzz(num) {
+            setTimeout( function() { 
+                var myTag = document.createElement('p');
+                var myFizzBuzz = createFizzBuzzNode(counter);
+                myTag.appendChild(myFizzBuzz);
+                document.querySelector('div').appendChild(myTag);
+                if (counter < num) {
+                    counter++;
+                    console.log(counter, ', ', num);
+                    fizzBuzz(num);
+                } else {
+                    return 0;
+                }
+            }, 1000)
+        }
+
+        var userNum = prompt("Enter a number bigger than 15 for FizzBuzz counter to work: ")
+        
+        fizzBuzz(userNum);
+    </script>
+</body>
+</html>
