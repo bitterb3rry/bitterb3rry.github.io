@@ -53,7 +53,6 @@ a {
     }
 }
 
-
 .bubble:after {
     content: '';
     position: absolute;
@@ -119,20 +118,21 @@ a {
 
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 }
 
-#send-bar:hover{
-    cursor: pointer;
-    animation: slide 2s ease-in-out infinite alternate;
+#send-bar p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    margin: 5px 0 0 5px;
+    color: whitesmoke;
+    animation: blinker .35s infinite alternate;
 }
 
-@keyframes slide {
+@keyframes blinker {
     from {
-        left: 41px;
-    }
-    to {
-        left: calc(100% - 1px);
+        opacity: 100%;
+    } to {
+        opacity: 0%;
     }
 }
 
@@ -201,7 +201,7 @@ ul {
 }
 
 ul li {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
 }
 
 ul li a {
