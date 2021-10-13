@@ -23,6 +23,7 @@
     else the number will output - background will be a purple tinted white -->
 
     <script>
+        /* a function that calculates the fizzbuzz magic and changes background and text color */
         function createFizzBuzzNode(num) {
             var output;
             var display = document.querySelector('div');
@@ -47,15 +48,16 @@
         }
 
         var counter = 1;
+        /* a function to add the fizzbuzz element to the page */
         function fizzBuzz(num) {
+            /* the DOM will wait 1 second before executing this code */
             setTimeout( function() { 
                 var myTag = document.createElement('p');
                 var myFizzBuzz = createFizzBuzzNode(counter);
                 myTag.appendChild(myFizzBuzz);
                 document.querySelector('div').appendChild(myTag);
+                /* a manual loop to check the count */
                 if (counter < num) {
-                    counter++;
-                    console.log(counter, ', ', num);
                     fizzBuzz(num);
                 } else {
                     return 0;
@@ -64,6 +66,7 @@
         }
 
         var userNum = prompt("Enter a number or larger for FizzBuzz counter to work: ");
+        /* make sure the user enters at least 15 */
         if (userNum >= 15) {
             fizzBuzz(userNum);
         } else {
