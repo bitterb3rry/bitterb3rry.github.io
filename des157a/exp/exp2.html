@@ -12,15 +12,15 @@
     </style>
 </head>
 <body>
-    <h1>Experiment 1</h1>
+    <h1>Experiment 2</h1>
     <h2>A FizzBuzz Counter</h2>
     <div></div>
 
 <!--from 1 -> number user inputed: 
-    FizzBuzz will output if the number is both divisible by 3 and 5
-    Fizz will output if the number is divisible by 3 only
-    Buzz will output if the number is divisible by 5 only
-    the number will out if the number is not divisible by any conbination above -->
+    FizzBuzz will output if the number is both divisible by 3 and 5 - background will turn indigo
+    Fizz will output if the number is divisible by 3 only - background will turn blue
+    Buzz will output if the number is divisible by 5 only - background will turn red
+    else the number will output - background will be a purple tinted white -->
 
     <script>
         function createFizzBuzzNode(num) {
@@ -63,9 +63,13 @@
             }, 1000)
         }
 
-        var userNum = prompt("Enter a number bigger than 15 for FizzBuzz counter to work: ")
+        var userNum = prompt("Enter a number or larger for FizzBuzz counter to work: ");
+        if (userNum >= 15) {
+            fizzBuzz(userNum);
+        } else {
+            userNum = prompt("That was lower than 15! Enter a number 15 or larger: ");
+        }
         
-        fizzBuzz(userNum);
     </script>
 </body>
 </html>
