@@ -42,7 +42,11 @@ article p {
     padding: 25px;
 }
 
-.bubble-left:after, .bubble-right:after, .typing-bubble:after {
+.bubble-right {
+    box-shadow: -5px 5px 2px 0px rgb(3, 3, 53);
+}
+
+.bubble-left:after, .typing-bubble:after {
     content: '';
     position: absolute;
     display: block;
@@ -56,11 +60,26 @@ article p {
     margin-top: -12.5px;
 }
 
+.bubble-right:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: -1;
+    border-style: solid;
+    border-width: 25px 0 0 34px;
+    border-color: transparent transparent transparent rgb(236, 235, 235);
+    top: 70%;
+    right: -24px;
+    margin-top: -7.5px;
+}
+
 .bubble-left {
     width: 280px;
 }
 
 .bubble-right {
+    margin-left: 48%;
     width: 500px;
 }
 
