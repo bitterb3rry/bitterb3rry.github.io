@@ -80,6 +80,20 @@ article p {
     width: 280px;
 }
 
+#salad-bubble, #dog-bubble  {
+    width: 400px;
+}
+
+#salad-im {
+    width: 400px; /* width of container */
+    height: 400px; /* height of container */
+    object-fit: cover;
+}
+
+#dog-im {
+    width: 99.5%;
+}
+
 .bubble-right {
     margin-left: 48%;
     width: 500px;
