@@ -51,6 +51,22 @@ form input, form select {
     justify-content: space-between;
 }
 
+form ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 445px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 18px;
+    list-style: none;
+    
+}
+
+form ul a {
+    color: #EE2BAC;
+    text-decoration: none;
+}
+
 /* custom inputs css here */
 select {
     width: 75px;
