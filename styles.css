@@ -1,40 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
 body {
-    background-color: darkslategrey;
+    background-color: #343546;
 }
 
+/* header css */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-h1 {
-    font-family: 'Righteous';
-    font-size: 36px;
+#logo {
+    width: 100px;
+    height: 100px;
 }
 
-#icons {
-    width: 200px;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
+/* content css */
+
+main {
+    /* height: 60vh; */
+    font-family: 'Raleway', sans-serif;
+    color:palevioletred;
+    text-align: center;
+    padding: 160px 0 160px 0;
 }
 
+/* nav css */
 
-.line {
+/* .line {
     border-top: 2px solid whitesmoke;
-}
+} */
+
+/* links css */
 
 ul {
     display: flex;
     list-style: none;
     justify-content: center;
+    font-family: 'Sanchez', serif;
 }
 
 ul li {
     margin: 0 40px 0 40px;
-    
 }
 
 ul li a{
@@ -45,7 +53,17 @@ a {
     text-decoration: none;
 }
 
-h2 {
-    margin: auto;
-    font-family: 'Raleway', sans-serif;
+/* footer css */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#icons {
+    width: 200px;
+    margin: 20px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
 }
