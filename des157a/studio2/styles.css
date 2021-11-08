@@ -157,3 +157,7 @@ ul li a {
     opacity: 50%;
     text-decoration: none;
 }
+
+ul li a:hover {
+    opacity: 100%;
+}

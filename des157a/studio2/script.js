@@ -12,12 +12,50 @@
     let overlayP = document.getElementById("overlay-p");
     let overlayTime = document.getElementById("overlay-time");
 
+    /* display clear image */
     img1.addEventListener('mouseover', function(e) {
-        /* display clear image */
+        
         img1.src = "./images/dorm-500.png";
-        /* img1.className = "hover-width"; */
+        document.body.style.cursor = "pointer";
     });
 
+    img2.addEventListener('mouseover', function(e) {
+        img2.src = "./images/sf-500.jpg";
+        document.body.style.cursor = "pointer";
+    });
+
+    img3.addEventListener('mouseover', function(e) {
+        img3.src = "./images/sutro-500.png";
+        document.body.style.cursor = "pointer";
+    });
+
+    img4.addEventListener('mouseover', function(e) {
+        img4.src = "./images/apartment-500.jpg";
+        document.body.style.cursor = "pointer";
+    });
+
+    /* back to blur image */
+    img1.addEventListener('mouseout', function(e) {
+        img1.src = "./images/dorm-52-blur-300.png";
+        document.body.style.cursor = "default";
+    });
+
+    img2.addEventListener('mouseout', function(e) {
+        img2.src = "./images/sf-80-blur-500.png";
+        document.body.style.cursor = "default";
+    });
+
+    img3.addEventListener('mouseout', function(e) {
+        img3.src = "./images/sutro-95-blur-500.png";
+        document.body.style.cursor = "default";
+    });
+
+    img4.addEventListener('mouseout', function(e) {
+        img4.src = "./images/apartment-100-blur-500.png";
+        document.body.style.cursor = "default";
+    });
+
+    /* overlay js */
     img1.addEventListener('click', function(e) {
         e.preventDefault();
         document.getElementById('overlay').className = 'showing';
@@ -50,44 +88,10 @@
         overlayTime.textContent = "FALL 2019";
     });
 
-    img2.addEventListener('mouseover', function(e) {
-        img2.src = "./images/sf-500.jpg";
-        /* img2.className = "hover-width"; */
-    });
-
-    img3.addEventListener('mouseover', function(e) {
-        img3.src = "./images/sutro-500.png";
-        /* img3.className = "hover-width"; */
-    });
-
-    img4.addEventListener('mouseover', function(e) {
-        img4.src = "./images/apartment-500.jpg";
-        /* img4.className = "hover-width"; */
-    });
-
-    img1.addEventListener('mouseout', function(e) {
-        /* display clear image */
-        img1.src = "./images/dorm-52-blur-300.png";
-        /* img1.classList.remove = "hover-width"; */
-    });
-
-    img2.addEventListener('mouseout', function(e) {
-        img2.src = "./images/sf-80-blur-500.png";
-        /* img2.classList.remove = "hover-width"; */
-    });
-
-    img3.addEventListener('mouseout', function(e) {
-        img3.src = "./images/sutro-95-blur-500.png";
-        /* img3.classList.remove = "hover-width"; */
-    });
-
-    img4.addEventListener('mouseout', function(e) {
-        img4.src = "./images/apartment-100-blur-500.png";
-        /* img4.classList.remove = "hover-width"; */
-    });
-
     document.querySelector('.close').addEventListener('click', function(e) {
         e.preventDefault();
         document.getElementById('overlay').className = 'hidden';
     });
+    /* ------------------- */
+
 }());
