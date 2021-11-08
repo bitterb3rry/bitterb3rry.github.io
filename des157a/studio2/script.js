@@ -8,8 +8,9 @@
     let img3 = document.getElementById("sutro");
     let img4 = document.getElementById("apt");
 
-    let overlayImg = document.getElementsByClassName("overlay-img");
-    let overlayP = document.getElementsByClassName("overlay-p");
+    let overlayImg = document.getElementById("overlay-img");
+    let overlayP = document.getElementById("overlay-p");
+    let overlayTime = document.getElementById("overlay-time");
 
     img1.addEventListener('mouseover', function(e) {
         /* display clear image */
@@ -21,8 +22,33 @@
         e.preventDefault();
         document.getElementById('overlay').className = 'showing';
         overlayImg.src = "./images/dorm-500.png";
-        overlayP.textContent = "A cotton cady sunset from the window of UC Davis Miller Hall 318. FALL 2018";
-    })
+        overlayP.textContent = "A sweet sweet cotton candy sunset from the window of UC Davis Miller Hall";
+        overlayTime.textContent = "FALL 2018";
+    });
+
+    img2.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('overlay').className = 'showing';
+        overlayImg.src = "./images/sf-500.jpg";
+        overlayP.textContent = "A mellow and relaxing sunset blanketing downtown San Francisco as the city takes a rest before it comes alive for the night";
+        overlayTime.textContent = "FALL 2019";
+    });
+
+    img3.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('overlay').className = 'showing';
+        overlayImg.src = "./images/sutro-500.png";
+        overlayP.textContent = "A cooling sunset atop of twin speaks looking at the handsome silouette of Sutro Tower";
+        overlayTime.textContent = "FALL 2019";
+    });
+
+    img4.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('overlay').className = 'showing';
+        overlayImg.src = "./images/apartment-500.jpg";
+        overlayP.textContent = "A perfect hot and cold blend sunset dawned the power lines and lucious tree viewable from the balcony of my Davis apartment";
+        overlayTime.textContent = "FALL 2019";
+    });
 
     img2.addEventListener('mouseover', function(e) {
         img2.src = "./images/sf-500.jpg";
