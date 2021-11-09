@@ -15,6 +15,7 @@ header {
     padding-top: 35px;
     background-color: rgb(168, 187, 132);
     border-radius: 15px;
+    box-shadow: inset 0 0 20px rgb(125, 139, 98);
 }
 
 header h1 {
@@ -22,14 +23,24 @@ header h1 {
     font-size: 48px;
 }
 
+section p {
+    margin-top: 10px;
+    color: aliceblue;
+}
+
 article h2 {
     margin: 0;
 }
 
 article p {
+    color: black;
     font-family: 'Raleway',sans-serif;
     font-weight: 500;
     margin: 0;
+}
+
+.bubble-left {
+    width: 280px;
 }
 
 .bubble-left, .bubble-right, .typing-bubble {
@@ -42,6 +53,10 @@ article p {
     margin-left: 50px;
     margin-top: 25px;
     padding: 25px;
+}
+
+.time-left {
+    margin-left: 55px;
 }
 
 .bubble-right {
@@ -76,8 +91,9 @@ article p {
     margin-top: -7.5px;
 }
 
-.bubble-left {
-    width: 280px;
+.time-right {
+    margin-right: 80px;
+    text-align: right;
 }
 
 #salad-bubble, #dog-bubble  {
@@ -95,7 +111,7 @@ article p {
 }
 
 .bubble-right {
-    margin-left: 48%;
+    margin-left: 55%;
     width: 500px;
 }
 
@@ -172,7 +188,7 @@ footer {
 #icons-container {
     display: flex;
     flex-direction: row;
-    width: 200px;
+    width: 220px;
     justify-content: space-between;
 }
 
@@ -182,7 +198,7 @@ footer {
     border: 1px solid floralwhite;
     box-shadow: 1px 1px 4px 0px whitesmoke;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 50px;
     display: flex;
     flex-direction: row;
 }
@@ -206,6 +222,10 @@ footer {
 #send-bar h2 {
     color: whitesmoke;
     margin: 13px 0px 0px 15px;
+}
+
+footer {
+    width: 100vw;
 }
 
 footer ul{
