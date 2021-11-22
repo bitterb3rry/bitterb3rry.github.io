@@ -126,11 +126,13 @@
             document.getElementById('quit').addEventListener('click', function() {
                 location.reload();
             });
-        } else {
+        } /* else {
             // show current score
             showCurrentScore();
-        }
+        } */
 
+        showCurrentScore();
+        
         function showCurrentScore() {
             /* score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}: ${gameData.score[0]}</strong> <strong>${gameData.players[1]}: ${gameData.score[1]}</strong></p>`; */
             score1.innerHTML = `<span>${gameData.score[0]}</span>`
