@@ -82,12 +82,17 @@
         } else {
             console.log('the game proceeds');
             gameData.score[gameData.index] += gameData.rollSum;
-            // calculate how much the car should move
-            var move = gameData.score[gameData.index] * 30;
-            console.log(`marginleft: ${gameData.cars[gameData.index].style.marginLeft}`);
-            console.log(`move: ${move}px`);
             
-            gameData.cars[gameData.index].style.marginLeft = `${move}px`;
+            // calculate how much the car should move
+            var newMargin = gameData.score[gameData.index] * 30;
+            console.log(`marginleft: ${gameData.cars[gameData.index].style.marginLeft}`);
+            console.log(`newmargin: ${newMargin}px`);
+
+            if ( newMargin > 900) {
+                gameData.cars[gameData.index].style.marginLeft = '900px';
+            } else {
+                gameData.cars[gameData.index].style.marginLeft = `${newMargin}px`;
+            }            
 
             actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
 
