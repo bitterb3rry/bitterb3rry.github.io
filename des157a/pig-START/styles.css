@@ -58,7 +58,6 @@ div {
 }
 
 #actions {
-    padding: 0;
     font-size: 24px;
 }
 
@@ -84,19 +83,33 @@ section {
     justify-content: space-between;
 }
 
-.car1 {
-    background-image: url('./images/car1.svg');
+.track {
+    width: 1050px;
 }
-.car2 {
-    background-image: url('./images/car2.svg');
+
+.car {
+    width: 134px;
+    height: 31px;
+    margin-left: 40px;
+    z-index: 1;
+}
+
+#car1 {
+    background-image: url("./images/car1.svg");
+}
+#car2 {
+    
+    background-image: url("./images/car2.svg");
 }
 
 hr {
+    position: absolute;
     width: 900px;
     height: 5px;
-    margin: 60px 80px 0 80px;
+    margin: -30px 80px 0 80px;
     background-color: aliceblue;
     border-radius: 5px;
+    z-index: -1;
 }
 
 #score1 span, #score2 span {
