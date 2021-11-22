@@ -132,11 +132,10 @@
         } */
 
         showCurrentScore();
-        
+
         function showCurrentScore() {
-            /* score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}: ${gameData.score[0]}</strong> <strong>${gameData.players[1]}: ${gameData.score[1]}</strong></p>`; */
-            score1.innerHTML = `<span>${gameData.score[0]}</span>`
-            score2.innerHTML = `<span>${gameData.score[1]}</span>`
+            score1.innerHTML = `${gameData.score[0]}`
+            score2.innerHTML = `${gameData.score[1]}`
         }
     }
 }());
