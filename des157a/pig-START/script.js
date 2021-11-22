@@ -9,6 +9,8 @@
     const score2 = document.getElementById('score2');
     const actionArea = document.getElementById('actions');
     const race = document.getElementById('race');
+    const car1 = document.getElementById('car1');
+    const car2 = document.getElementById('car2');
     const board = document.getElementById('board');
 
     var gameData = {
@@ -16,6 +18,7 @@
             'images/die4.svg', 'images/die5.svg', 'images/die6.svg'],
         players: ['player 1', 'player 2'],
         score: [0, 0],
+        cars: [car1, car2],
         roll1: 0,
         roll2: 0,
         rollSum: 0,
@@ -77,7 +80,15 @@
             setTimeout(setUpTurn, 2000);
         } else {
             console.log('the game proceeds');
-            gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
+            gameData.score[gameData.index] += gameData.rollSum;
+            
+            // calculate how much the car should move
+            var move = gameData.score[gameData.index] * 30;
+            console.log(`marginleft: ${gameData.cars[gameData.index].style.marginLeft}`);
+            console.log(`move: ${move}px`);
+            
+            gameData.cars[gameData.index].style.marginLeft = `${move}px`;
+            
             actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
 
             document.getElementById('rollagain').addEventListener('click', function() {
