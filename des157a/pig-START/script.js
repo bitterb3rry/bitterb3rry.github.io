@@ -69,6 +69,7 @@
             console.log('Snake eyes were rolled');
             game.innerHTML += '<p>Oh snap! Snake eyes!</p>';
             gameData.score[gameData.index] = 0;
+            gameData.cars[gameData.index].style.marginLeft = '0';
             // switch player
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             setTimeout(setUpTurn, 2000);
@@ -81,14 +82,13 @@
         } else {
             console.log('the game proceeds');
             gameData.score[gameData.index] += gameData.rollSum;
-            
             // calculate how much the car should move
             var move = gameData.score[gameData.index] * 30;
             console.log(`marginleft: ${gameData.cars[gameData.index].style.marginLeft}`);
             console.log(`move: ${move}px`);
             
             gameData.cars[gameData.index].style.marginLeft = `${move}px`;
-            
+
             actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
 
             document.getElementById('rollagain').addEventListener('click', function() {
@@ -115,6 +115,7 @@
             actionArea.innerHTML = '';
             /* gameControl.innerHTML = '<h2>The Game Has Ended</h2>'; */
             gameControl.className = 'show';
+            gameControl.style.marginTop = '0';
             gameControl.innerHTML = '<button id="quit">Start a New Game?</button>';
         } else {
             // show current score
