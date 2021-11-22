@@ -40,7 +40,7 @@
 
         gameControl.className = 'hidden';
         board.className = 'show';
-        race.className = 'show';
+        /* race.className = 'show'; */
 
 /*         document.getElementById('quit').addEventListener('click', function() {
             location.reload();
@@ -69,7 +69,7 @@
             console.log('Snake eyes were rolled');
             game.innerHTML += '<p>Oh snap! Snake eyes!</p>';
             gameData.score[gameData.index] = 0;
-            gameData.cars[gameData.index].style.marginLeft = '0';
+            gameData.cars[gameData.index].style.marginLeft = '40px';
             // switch player
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             setTimeout(setUpTurn, 2000);
@@ -117,6 +117,10 @@
             gameControl.className = 'show';
             gameControl.style.marginTop = '0';
             gameControl.innerHTML = '<button id="quit">Start a New Game?</button>';
+
+            document.getElementById('quit').addEventListener('click', function() {
+                location.reload();
+            });
         } else {
             // show current score
             showCurrentScore();
