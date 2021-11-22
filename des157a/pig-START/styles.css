@@ -1,0 +1,119 @@
+@font-face {
+    font-family: boldest-enough;
+    src: url("./Boldest_Enough.otf");
+}
+
+body {
+    font-family: Arial;
+    color: #333;
+    background-color: #132554;
+    line-height: 1.5em;
+}
+
+header {
+    width: 1366px;
+    height: 213px;
+    margin-left: 40px;
+    background-image: url("./images/awning.png");
+    text-align: center;
+}
+
+h1{
+    font-family: 'boldest-enough';
+    font-size: 80px;
+    color: #EFD26D;
+    margin: 0;
+    padding-top: 45px;
+}
+
+button { 
+    cursor: pointer;
+    text-decoration: underline;
+    border: none;
+    background-color: transparent;
+}
+
+div {
+    padding: 20px;
+}
+
+#gamecontrol {
+    text-align: center;
+    vertical-align: middle;
+}
+
+#gamecontrol, #game, #actions, button{
+    color: aliceblue;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+#game {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+#game img {
+    margin: 0 15px 0 15px;
+}
+
+#actions {
+    padding: 0;
+    font-size: 24px;
+}
+
+#board {
+    padding: 0;
+    text-align: center;
+}
+
+section {
+    position: fixed;
+}
+
+.race {
+    margin-top: 20px;
+}
+
+.players {
+    padding: 0 80px 0 80px;
+    font-family: 'boldest-enough';
+    font-size: 48px;
+    color: #EFD26D;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car1 {
+    background-image: url('./images/car1.svg');
+}
+.car2 {
+    background-image: url('./images/car2.svg');
+}
+
+hr {
+    width: 900px;
+    height: 5px;
+    margin: 60px 80px 0 80px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+#score1 span, #score2 span {
+    display: inline-block;
+    width: 75px;
+    line-height: 75px;
+    text-align: center;
+    color: black;
+    background-color: #EFDBC8;
+    border-radius: 10%;
+    font-size: 42px;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
