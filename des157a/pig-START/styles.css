@@ -45,7 +45,7 @@ div {
     margin-top: 100px;
 }
 
-#gamecontrol, #game, #actions, button{
+#gamecontrol, #game, #actions, button, footer{
     color: aliceblue;
     font-family: 'IBM Plex Mono', monospace;
 }
@@ -127,6 +127,22 @@ hr {
     border-radius: 10%;
     font-size: 42px;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: whitesmoke;
+    margin: 0 110px 0 110px;
+}
+
 
 .hidden {
     display: none;
