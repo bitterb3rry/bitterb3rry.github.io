@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+}
+
+#scroll-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 100vw;
+    overflow: hidden;
+}
+
+img {
+    height: 100vh;
+}
