@@ -13,6 +13,7 @@
 
 body {
     height: 768px;
+    overflow: hidden;
     background-color: #273339;
 }
 
@@ -32,7 +33,6 @@ p {
     font-family: 'Sanchez', serif;
     color: var(--para);
 }
-
 
 #scroll-wrapper {
     display: flex;
@@ -114,33 +114,8 @@ img {
     height: 768px;
 }
 
-#line {
-    width: 8px;
-    height: 100vh;
-}
-
-#s1 .des {
-    width: 500px;
-}
-
-#s3 img {
-    margin-left: 75px;
-}
-
-#s4 {
-    display: flex;
-    flex-direction: row;
-}
-
 .des {
     padding: 70px;
-}
-
-#s3 h2 {
-    bottom: 0;
-    width: 300px;
-    height: 60px;
-    transform: rotate(-90deg);
 }
 
 .des p {
@@ -148,6 +123,86 @@ img {
     font-size: 18px;
     font-family: 'Sanchez', serif;
 }
+
+/* ------------ slide 1 ------------- */
+#s1 .des {
+    width: 500px;
+}
+/* #s1-shapes {
+    width: 200px;
+    height: 100vh;
+} */
+.hline {
+    position: absolute;
+    width: 10px;
+    height: 100vh;
+}
+#hline1 {
+    color: #DC664D;
+}
+#hline2 {
+    color: #7E5B7D;
+}
+#hline3 {
+    color: #AB677E; /* B16275 */
+}
+/* ---------------------------------- */
+
+/* ------------ slide 2 ------------- */
+/* ---------------------------------- */
+
+/* ------------ slide 3 ------------- */
+#s3 img {
+    margin-left: 75px;
+}
+#s3 h2 {
+    bottom: 0;
+    width: 300px;
+    height: 60px;
+    transform: rotate(-90deg);
+}
+#s2-shapes {
+    /* position: relative; */
+    margin-top: 85px;
+    max-height: 250px;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+}
+.circle {
+    /* position: absolute; */
+    border: 8px solid;
+    border-radius: 50%;
+}
+#circle1, #circle2, #circle3 {
+    grid-column: 1;
+    grid-row: 1;
+}
+#circle1 {
+    width: 500px;
+    height: 500px;
+    color: #DFE4EA;
+}
+#circle2 {
+    margin-left: 48px;
+    width: 400px;
+    height: 400px;
+    color: #F4E0D6;
+}
+#circle3 {
+    margin-left: 100px;
+    width: 300px;
+    height: 300px;
+    color: #DDBFBD;
+}
+/* ---------------------------------- */
+
+/* ------------ slide 4 ------------- */
+#s4 {
+    display: flex;
+    flex-direction: row;
+}
+/* ---------------------------------- */
 
 #progress-bar {
     position: fixed;
