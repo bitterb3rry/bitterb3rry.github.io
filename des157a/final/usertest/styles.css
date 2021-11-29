@@ -182,9 +182,12 @@ img {
 /* ---------------------------------- */
 
 /* ------------ slide 2 ------------- */
+#s2 .des {
+    padding-left: 150px;
+}
 #s2-shapes {
     /* position: relative; */
-    margin-top: 85px;
+    margin-top: 95px;
     max-height: 250px;
     overflow: hidden;
     display: grid;
