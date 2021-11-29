@@ -1,11 +1,11 @@
 (function() {
     'use strict';
     console.log("reading js yeh");
-/* 
+
     alert("welcome to magic hour 2.0 user testing.");
     alert("this test is for the purpose of testing how well the website is performing at the current stage.")
     alert("take into consideration the site is only still a rough prototype");
-    alert("enjoy your stay!"); */
+    alert("enjoy your stay!");
 
     /* const page = document.scrollingElement || document.documentElement;
     page.addEventListener('wheel', function(event) {
