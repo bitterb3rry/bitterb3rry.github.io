@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+@font-face {
+    font-family: magic-romance;
+    src: url("../magic-romance.ttf");
+}
+
+:root {
+    --lightyellow: rgb(243, 237, 188);
+    --para: aliceblue;
+}
+
+
+body {
+    height: 768px;
+    overflow: hidden;
+    background-color: #273339;
+    /* animation: color-change 20s ease-in-out infinite; */
+}
+
+#front h1 {
+    font-family: magic-romance;
+    font-size: 108px;
+    color: var(--lightyellow);
+    animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0% {
+        text-shadow: 1px 1px 10px moccasin;
+    } 50% {
+        text-shadow: 1px 1px 5px aliceblue;
+    } 100% {
+        text-shadow: 1px 1px 10px moccasin;
+    }
+}
+
+h2 {
+    font-family: magic-romance;
+    font-size: 60px;
+    line-height: 65px;
+    color: var(--lightyellow);
+}
+
+p {
+    font-family: 'Sanchez', serif;
+    color: var(--para);
+}
+
+#scroll-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.slide {
+    flex: 0 0 auto;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#front {
+/*     flex: 0 0 auto;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    text-align: center; */
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: #1d232e;
+    } 33% {
+        background-color: rgb(21, 30, 36);
+    } 66% {
+        background-color: rgb(37, 35, 56);
+    } 100% {
+        background-color: #1d232e;
+    }
+}
+
+#content {
+    display: flex;
+}
+
+#content p {
+    margin-top: 45px;
+    align-self: center;
+    font-size: 16px;
+}
+
+#scroll-sign {
+    margin-left: 90px;
+    opacity: 50%;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+#arrow {
+    position: relative;
+    margin-left: 15px;
+    opacity: 75%;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(10px);
+    } 50% {
+        transform: translateX(-10px);
+    } 100% {
+        transform: translateX(10px);
+    }
+} 
+footer {
+    width: 400px;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul li a {
+    display: block;
+    font-family: 'Sanchez', serif;
+    text-decoration: none;
+    color: var(--lightyellow);
+}
+
+img {
+    height: 768px;
+}
+
+.des {
+    padding: 70px;
+}
+
+.des p {
+    width: 450px;
+    color: rgb(222, 230, 236);
+    font-size: 20px;
+    font-family: 'Sanchez', serif;
+}
+.des h2 {
+    width: 600px;
+}
+
+/* ------------ slide 1 ------------- */
+#s1 .des {
+    width: 500px;
+}
+#s1-shapes {
+/*     width: 200px;
+    height: 100vh; */
+    display: flex;
+    flex-direction: row;
+}
+.hline {
+    display: block;
+    margin-right: 30px;
+    width: 10px;
+    height: 100vh;
+    color: white;
+}
+#hline1 {
+    color: #DC664D;
+}
+#hline2 {
+    color: #7E5B7D;
+}
+#hline3 {
+    color: #AB677E; /* B16275 */
+}
+/* ---------------------------------- */
+
+/* ------------ slide 2 ------------- */
+#s2-shapes {
+    /* position: relative; */
+    margin-top: 85px;
+    max-height: 250px;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+}
+.circle {
+    /* position: absolute; */
+    border: 8px solid;
+    border-radius: 50%;
+}
+#circle1, #circle2, #circle3 {
+    grid-column: 1;
+    grid-row: 1;
+}
+#circle1 {
+    width: 500px;
+    height: 500px;
+    color: #DFE4EA;
+}
+#circle2 {
+    margin-left: 48px;
+    width: 400px;
+    height: 400px;
+    color: #F4E0D6;
+}
+#circle3 {
+    margin-left: 100px;
+    width: 300px;
+    height: 300px;
+    color: #DDBFBD;
+}
+/* ---------------------------------- */
+
+/* ------------ slide 3 ------------- */
+#s3 img {
+    margin-left: 75px;
+}
+#s3 h2 {
+    margin: 0;
+    width: 1000px;
+    height: 300px;
+    /* transform: rotate(-90deg); */
+}
+/* ---------------------------------- */
+
+/* ------------ slide 4 ------------- */
+#s4 {
+    display: flex;
+    flex-direction: row;
+}
+#s4 .des {
+    padding-left: 200px;
+} 
+#dyk {
+    font-size: 24px;
+    font-weight: 800;
+    text-decoration: underline;
+}
+#formula {
+    width: 600px;
+    color: #F46C4C;
+}
+#s4-shapes {
+    margin-top: -100px;
+}
+.dline {
+    display: block;
+    margin-right: 30px;
+    width: 10px;
+    height: 600px;
+    color: white;
+    transform: rotate(-45deg);
+}
+#dline1 {
+    color: #F46C4C;
+}
+#dline2 {
+    color: #D28491;
+}
+#dline3 {
+    color: #5075B1; /* B16275 */
+}
+/* ---------------------------------- */
+
+#progress-bar {
+    position: fixed;
+    bottom: 0;
+    width: 0%;
+    height: 20px;
+    background-color: bisque;
+}
