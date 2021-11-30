@@ -19,3 +19,12 @@ p {
     margin: 0;
     font-size: 24px;
 }
+
+img {
+    margin: 21px;
+    width: 430px;
+}
+
+#conclusion {
+    margin: 0 50px 30px 50px;
+}
