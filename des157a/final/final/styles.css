@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+@font-face {
+    font-family: magic-romance;
+    src: url("../magic-romance.ttf");
+}
+
+:root {
+    --lightyellow: rgb(243, 237, 188);
+    --para: aliceblue;
+}
+
+
+body {
+    height: 768px;
+    overflow: hidden;
+    background-color: #273339;
+    /* animation: color-change 20s ease-in-out infinite; */
+}
+
+#front h1 {
+    font-family: magic-romance;
+    font-size: 108px;
+    color: var(--lightyellow);
+    animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0% {
+        text-shadow: 1px 1px 10px moccasin;
+    } 50% {
+        text-shadow: 1px 1px 5px aliceblue;
+    } 100% {
+        text-shadow: 1px 1px 10px moccasin;
+    }
+}
+
+h2 {
+    font-family: magic-romance;
+    font-size: 60px;
+    line-height: 65px;
+    color: var(--lightyellow);
+}
+
+p {
+    font-family: 'Sanchez', serif;
+    color: var(--para);
+}
+
+#scroll-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.slide {
+    flex: 0 0 auto;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#front {
+    margin-top: -400px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: #1d232e;
+    } 33% {
+        background-color: rgb(21, 30, 36);
+    } 66% {
+        background-color: rgb(37, 35, 56);
+    } 100% {
+        background-color: #1d232e;
+    }
+}
+
+#content {
+    display: flex;
+}
+
+#content p {
+    margin-top: 45px;
+    align-self: center;
+    font-size: 16px;
+}
+
+#scroll-sign {
+    margin-left: 90px;
+    opacity: 50%;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+#arrow {
+    position: relative;
+    margin-left: 15px;
+    opacity: 75%;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateX(10px);
+    } 50% {
+        transform: translateX(-10px);
+    } 100% {
+        transform: translateX(10px);
+    }
+} 
+footer {
+    width: 400px;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul li a {
+    padding-bottom: 2px;
+    display: block;
+    font-family: 'Sanchez', serif;
+    text-decoration: none;
+    color: var(--lightyellow);
+}
+
+footer ul li a:hover {
+    border-bottom: 1.5px solid;
+}
+
+img {
+    margin-top: 30px;
+    margin-left: 30px;
+    height: 650px;
+}
+
+.des {
+    padding: 70px;
+}
+
+.des p {
+    width: 450px;
+    color: rgb(222, 230, 236);
+    font-size: 20px;
+    font-family: 'Sanchez', serif;
+}
+.des h2 {
+    width: 600px;
+}
+
+.imgs {
+    display: flex;
+    flex-direction: column;
+} 
+
+figcaption {
+    margin-left: -85px;
+    width: 110px;
+    color:rgb(222, 230, 236);
+    font-family: 'Sanchez', serif;
+    font-size: 16px;
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+}
+/* ------------ slide 1 ------------- */
+#s1 .des {
+    width: 500px;
+}
+#s1-shapes {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: row;
+}
+.vline {
+    margin-right: 30px;
+    width: 9px;
+    height: 768px;
+    color: white;
+}
+#vline1 {
+    background-color: #DC664D;
+}
+#vline2 {
+    background-color: #7E5B7D;
+}
+#vline3 {
+    background-color: #AB677E; 
+}
+/* ---------------------------------- */
+
+/* ------------ slide 2 ------------- */
+#s2 .des {
+    padding-left: 150px;
+}
+#s2-shapes {
+    margin-top: 95px;
+    max-height: 250px;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+}
+.circle {
+    /* position: absolute; */
+    border: 8px solid;
+    border-radius: 50%;
+}
+#circle1, #circle2, #circle3 {
+    grid-column: 1;
+    grid-row: 1;
+}
+#circle1 {
+    width: 500px;
+    height: 500px;
+    color: #DFE4EA;
+}
+#circle2 {
+    margin-left: 48px;
+    width: 400px;
+    height: 400px;
+    color: #F4E0D6;
+}
+#circle3 {
+    margin-left: 100px;
+    width: 300px;
+    height: 300px;
+    color: #DDBFBD;
+}
+/* ---------------------------------- */
+
+/* ------------ slide 3 ------------- */
+#s3 h2 {
+    margin-top: 380px;
+}
+.hline {
+    margin-bottom: 30px;
+    width: 600px;
+    height: 8px;
+    color: white;
+}
+#hline1 {
+    background-color: #5E5E65;
+}
+#hline2 {
+    background-color: #CEBCA0;
+}
+#hline3 {
+    background-color: #E9AD5E; 
+}
+/* ---------------------------------- */
+
+/* ------------ slide 4 ------------- */
+#s4 {
+    display: flex;
+    flex-direction: row;
+}
+#s4 .des {
+    padding-left: 200px;
+} 
+#dyk {
+    font-size: 24px;
+    font-weight: 800;
+}
+#formula {
+    width: 600px;
+    color: #F46C4C;
+}
+#s4-shapes {
+    margin-top: -300px;
+}
+.dline {
+    margin-right: 30px;
+    width: 10px;
+    height: 800px;
+    color: white;
+    transform: rotate(-45deg);
+}
+#dline1 {
+    background-color: #F46C4C;
+}
+#dline2 {
+    background-color: #D28491;
+    margin-top: -730px;
+}
+#dline3 {
+    background-color: #5075B1; 
+    margin-top: -730px;
+}
+/* ---------------------------------- */
+
+#progress-bar {
+    position: fixed;
+    bottom: 0;
+    width: 0%;
+    height: 20px;
+    background-color: bisque;
+}
