@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
 
 body {
-    background-color: #343546;
+    background-color: #F9F9F9;
+}
+
+#body-container {
+    display: flex;
+    flex-direction: row;
 }
 
 /* header css */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #logo {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
 
 /* content css */
@@ -22,17 +21,44 @@ main {
     /* height: 60vh; */
     font-family: 'Raleway', sans-serif;
     color:palevioletred;
-    text-align: center;
-    padding: 160px 0 160px 0;
 }
 
 /* nav css */
 
-/* .line {
-    border-top: 2px solid whitesmoke;
-} */
+nav ul{
+    display: flex;
+    flex-direction: column;
+}
 
-/* links css */
+nav ul li {
+    margin: 0 0 10px 0;
+}
+
+nav ul li a {
+    font-size: 24px;
+}
+
+/* main css */
+
+main {
+    margin: 200px 0 0 75px;
+    display: flex;
+    flex-direction: row;
+}
+
+section {
+    width: 500px;
+    height: 280px;  
+    background-size: 500px;
+    background-color: antiquewhite;
+    margin: 30px;
+}
+
+#magic-hour {
+    background-image: url('./images/works/magic-hour.png');
+}
+
+/* footer css */
 
 ul {
     display: flex;
@@ -46,7 +72,7 @@ ul li {
 }
 
 ul li a{
-    color: rgb(236, 185, 56); 
+    color: #4B68CE; 
 }
 
 a {
