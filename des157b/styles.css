@@ -1,9 +1,14 @@
+@font-face {
+    font-family: "junegull";
+    src: url("/fonts/junegull.ttf");
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #333;
+    background-color: #E8D7CE;
     color: rgb(235, 235, 235);
     transition: all 2s;
 }
@@ -20,11 +25,13 @@ body.switch {
     /* make sure the columns don't get too small and text stays readable */
     min-width: 900px;
     margin: 1em auto;
-    padding-top: 2em;
+    padding-top: 1em;
 }
 
 header {
-    margin: 0 auto 2em auto;
+    margin: 0 auto 1em auto;
+    font-family: 'Roboto', sans-serif;
+    color: #603900;
 }
 
 #banner {
@@ -33,14 +40,92 @@ header {
     width: 1100px;
     height: 250px;
     margin: auto;
-    background-color: rgb(235, 235, 235);
+    background-color: #FBE6C8;
+    border-radius: 25px;
     overflow: hidden;
 }
+
+#bowl {
+    position: relative;
+    width: 800px;
+    height: 750px;
+    background-color: #EFC8B1;
+    border: 20px solid #603900;
+    border-radius: 50%;
+    align-self: center;
+    left: 150px;
+    z-index: 1;
+}
+
+/* ------------------- letters css ------------------- */
+
+.letters {
+    position: absolute;
+    font-family: "junegull";
+    font-size: 130px;
+    color: #FBE6C8;
+    z-index: 2;
+}
+
+#g {
+    left: 225px;
+    top: 30px;
+    transform: rotate(-15deg);
+}
+
+#o1 {
+    left: 300px;
+    top: -0px;
+}
+
+#o2 {
+    left: 370px;
+    top: 60px;
+}
+
+#d {
+    left: 465px;
+    top: 90px;
+    transform: rotate(15deg);
+}
+
+#s {
+    left: 575px;
+    top: 30px;
+    transform: rotate(-15deg);
+}
+
+#carrot {
+    /* give width and height , set as bg image */
+    width: 77px;
+    height: 74px;
+    background-image: url("images/carrot.svg");
+    left: 650px;
+    top: 35px;
+} 
+
+#u {
+    left: 715px;
+    top: 85px;
+    transform: rotate(12deg);
+}
+
+#p {
+    left: 805px;
+    top: 10px;
+    transform: rotate(4deg);
+}
+/* ------------------- letters css end ------------------- */
 
 #banner.switch {
     background-color: #333;
     color: rgb(235, 235, 235);
     transition: all 2s;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
 }
 
 main {
@@ -50,10 +135,34 @@ main {
 }
 
 main section {
-    width: 25%;
-    border: 1px rgb(235, 235, 235) dashed;
+    width: 20%;
+/*     background-color: rgb(235, 235, 235);
+ */    border: 5px rgb(235, 235, 235) solid;
+    border-radius: 30px;
     margin: 0 .25em;
-    padding: 1em;
+    padding: 20px;
+}
+
+h3 {
+    margin: 10px 0;
+    font-family: "junegull";
+    font-size: 28px;
+}
+
+#projects {
+    color: #5f8555;
+}
+
+#research {
+    color: #c28b6c;
+}
+
+#development {
+    color: #7ca1c4;
+}
+
+#final {
+    color: #a8779e;
 }
 
 a {
@@ -72,10 +181,12 @@ section li {
 }
 
 section a {
+    font-family: 'Roboto';
+    font-size: 18px;
     line-height: 1.1em;
     display: inline-block;
     padding: .5em;
-    color: orange;
+    color: #A89476;
 }
 
 section a:hover {
@@ -94,25 +205,28 @@ section.switch a:hover {
 
 button {
     position: absolute;
-    top: 20px;
+    top: 5px;
     right: 20px;
     padding: 12px;
-    background-color: orange;
-    color: #333;
-    border: 1px solid transparent;
+    width: 140px;
+    height: 80px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #603900;
+    font-weight: 700;
+    background-color: transparent;
+    border: 1px solid transparent; 
+    background-image: url("images/spoon.svg");
 }
 
 button:hover {
-    background-color: coral;
-    cursor: pointer;
+    /* spoon rotates */
 }
 
 button.switch {
-    background-color: rgb(235, 235, 235);
-    border-color: #333;
+    background-image: url("images/spoon-switch.svg");
 }
 
 button.switch:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235)
+    
 }
