@@ -46,17 +46,40 @@ main {
     flex-direction: row;
 }
 
+.project {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    align-items: center;
+}
+
 section {
     width: 500px;
-    height: 280px;  
+    height: 270px;  
     background-size: 500px;
     background-color: antiquewhite;
-    margin: 30px;
 }
 
 #magic-hour {
     background-image: url('./images/works/magic-hour.png');
 }
+
+article {
+    width: 400px;
+    height: 150px;
+    margin-top: -40px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 50%;
+    background-color:lightsteelblue;
+    text-align: center;
+}
+
+article p {
+    color: black;
+    font-size: 20px;
+}
+
+
 
 /* footer css */
 
