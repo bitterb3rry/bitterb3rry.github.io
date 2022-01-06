@@ -44,28 +44,19 @@
                 return "you're orange-inal";
             case yellow:
                 w = "./media/yellow.png";
-                return "your smile is as bright as the sun";
+                return "your smile is as bright as the yellow sun";
             case green:
                 w = "./media/green.png";
                 return "green";
             case blue:
                 w = "./media/blue.png";
-                return "you make my blues go away";
+                return "you blew me away";
             case purple:
                 w = "./media/purple.png";
                 return "they say purple is brilliant and so are you";
             case pink:
                 w = "./media/pink.png";
                 return "i pink-y promise these compliments are true";
-            case brown:
-                w = "./media/brown.png";
-                return "brown";
-            case black:
-                w = "./media/black.png";
-                return "black";
-            case white:
-                w = "./media/white.png";
-                return "white";
         };
     }
     
