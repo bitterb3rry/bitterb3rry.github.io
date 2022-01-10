@@ -69,7 +69,7 @@ header.switch {
 
 .letters {
     position: absolute;
-    font-family: "junegull";
+    font-family: "junegull", sans-serif;
     font-size: 130px;
     color: #FBE6C8;
     z-index: 2;
