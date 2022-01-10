@@ -1,6 +1,6 @@
 @font-face {
     font-family: "junegull";
-    src: local("./fonts/junegull.ttf");
+    src: url("./fonts/junegull.ttf") format("ttf");
 }
 
 * {
