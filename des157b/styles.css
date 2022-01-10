@@ -75,26 +75,43 @@ header.switch {
     z-index: 2;
 }
 
+@keyframes rotatep15 {
+    
+}
+
 #g {
     left: 225px;
     top: 30px;
     transform: rotate(-15deg);
 }
 
+#g:hover, #s:hover {
+    transform: rotate(15deg);
+}
+
 #o1 {
     left: 300px;
-    top: -0px;
+}
+#o1:hover {
+    transform: scale(120%);
 }
 
 #o2 {
     left: 370px;
     top: 60px;
 }
+#o2:hover {
+    transform: scale(70%);
+}
 
 #d {
     left: 465px;
     top: 90px;
     transform: rotate(15deg);
+}
+
+#d:hover, #u:hover, #p:hover {
+    transform: rotate(-15deg);
 }
 
 #s {
@@ -111,6 +128,9 @@ header.switch {
     left: 650px;
     top: 35px;
 } 
+#carrot:hover {
+    transform: rotate(25deg);
+}
 
 #u {
     left: 715px;
@@ -283,17 +303,14 @@ button {
     background-image: url("images/spoon.svg");
 }
 
-button:hover {
-    /* spoon rotates */
+button:hover, button.switch:hover {
+    transform: rotate(15deg);
+    cursor: pointer;
 }
 
 button.switch {
     color: #FEEFE7;
     background-image: url("images/spoon-switch.svg");
-}
-
-button.switch:hover {
-    
 }
 
 .hidden {
