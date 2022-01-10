@@ -14,7 +14,7 @@ body {
 }
 
 body.switch {
-    background-color: rgb(235, 235, 235);
+    background-color: #414B65;
     color: #333;
 }
 
@@ -34,15 +34,23 @@ header {
     color: #603900;
 }
 
-#banner {
+header.switch {
+    font-style: italic;
+    color: #FEEFE7;
+}
+
+#light, #dark {
     position: relative;
-    display: flex;
+    /* display: flex; */
     width: 1100px;
     height: 250px;
-    margin: auto;
-    background-color: #FBE6C8;
+    margin: auto;  
     border-radius: 25px;
     overflow: hidden;
+}
+
+#light {
+    background-color: #FBE6C8;
 }
 
 #bowl {
@@ -52,7 +60,7 @@ header {
     background-color: #EFC8B1;
     border: 20px solid #603900;
     border-radius: 50%;
-    align-self: center;
+    bottom: 100%;
     left: 150px;
     z-index: 1;
 }
@@ -117,6 +125,53 @@ header {
 }
 /* ------------------- letters css end ------------------- */
 
+#dark {
+    background-color: #575757;
+}
+
+.bubble {
+    position: relative;
+    background: #C4C4C4;
+    color: #FEEFE7;
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 90px;
+    text-align: center;
+    width: 551px;
+    height: 90px;
+    border-radius: 46px;
+    left: 50px;
+    margin: 20px 0;
+}
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent #C4C4C4;
+    border-width: 13px 20px 13px 0;
+    top: 50%;
+    left: -18px;
+    margin-top: -13px;
+}
+
+.bubble p {
+    margin: 0;
+    font-family: "junegull";
+    font-size: 60px;
+    font-style: normal;
+}
+
+#bubble1 {
+    width: 610px;
+}
+
+#bubble2 {
+    width: 850px;
+}
+
 #banner.switch {
     background-color: #333;
     color: rgb(235, 235, 235);
@@ -143,10 +198,19 @@ main section {
     padding: 20px;
 }
 
+main section.switch {    
+    border-color: transparent;
+    background-color: #E5E5E5;
+}
+
 h3 {
     margin: 10px 0;
     font-family: "junegull";
     font-size: 28px;
+}
+
+body.switch h3 {
+    color: #414B65;
 }
 
 #projects {
@@ -208,7 +272,7 @@ button {
     top: 5px;
     right: 20px;
     padding: 12px;
-    width: 140px;
+    width: 141px;
     height: 80px;
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
@@ -224,9 +288,18 @@ button:hover {
 }
 
 button.switch {
+    color: #FEEFE7;
     background-image: url("images/spoon-switch.svg");
 }
 
 button.switch:hover {
     
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
 }
