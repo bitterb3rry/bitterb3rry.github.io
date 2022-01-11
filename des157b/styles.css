@@ -69,8 +69,8 @@ header.switch {
 
 .letters {
     position: absolute;
-    font-family: "junegull", sans-serif;
-    font-size: 130px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 110px;
     color: #FBE6C8;
     z-index: 2;
 }
@@ -179,8 +179,8 @@ header.switch {
 
 .bubble p {
     margin: 0;
-    font-family: "junegull";
-    font-size: 60px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 55px;
     font-style: normal;
 }
 
@@ -225,8 +225,8 @@ main section.switch {
 
 h3 {
     margin: 10px 0;
-    font-family: "junegull";
-    font-size: 28px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 24px;
 }
 
 body.switch h3 {

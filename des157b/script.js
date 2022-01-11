@@ -34,4 +34,11 @@
             mode = 'dark'
         }
     })
+
+/*     if (mode === 'dark') {
+        // interval for first message
+        const first = setInterval(popup1, 1000);
+        // interval for second message
+        const second = setInterval(popup2, 3000);
+    } */
 })();
