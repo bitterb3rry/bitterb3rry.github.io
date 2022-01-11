@@ -93,7 +93,7 @@ header.switch {
     left: 300px;
 }
 #o1:hover {
-    transform: scale(120%);
+    transform: scale(1.2);
 }
 
 #o2 {
@@ -101,7 +101,7 @@ header.switch {
     top: 60px;
 }
 #o2:hover {
-    transform: scale(70%);
+    transform: scale(0.7);
 }
 
 #d {
