@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="script.js" defer></script>
+
+    <title>MiniStudio 1</title>
+</head>
+
+<body>
+    <h1 id="title">ketchup TV</h1>
+    <h2>closed captions brought to you by Dua Lipa's Feat. DaBaby 'Levitating' </h2>
+    
+    <div id="display">
+        
+        <video id="myVideo" poster="" autoplay muted playsinline>
+            <source src="media/ketchup.mp4" type="video/mp4">
+            <source src="media/ketchup.webm" type="video/webm">
+    
+            <p>
+                Your brower doesn't support HTML5 video.
+                Here is a <a id="fallback" href="media/ketchup.mp4">link to the video</a> instead.
+            </p>
+        </video>
+
+        <img src="images/tv.svg">
+            
+        <p id="caption"></p>
+    </div>
+    
+    <div id="menu">
+        <div class="button" id="channel1">channel 1</div>
+        <div class="button" id="channel2">channel 2</div>
+        <div class="button" id="channel3">channel 3</div>
+    </div>
+
+    <i class="far fa-compass"></i>
+</body>
+</html>
