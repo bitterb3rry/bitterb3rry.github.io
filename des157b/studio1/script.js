@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    const loading = document.querySelector('.fa-compass');
+    const loading = document.querySelector('.fa-broadcast-tower');
 
     const title = document.getElementById('title')
     const myVideo = document.querySelector('#myVideo');
