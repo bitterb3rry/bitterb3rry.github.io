@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,500;1,700&display=swap');
+
+body {
+    background-color: cornsilk;
+    animation: energy 20s infinite;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: flex-end;
+}
+
+h1 {
+    margin: 20px 0;
+    padding-left: 30px;
+    font-size: 64px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@keyframes energy {
+    0% {
+        background-color: rgb(70, 95, 163);
+    } 30% {
+        background-color: rgb(151, 152, 214)
+    } 40% {
+        background-color: rgb(70, 95, 163);
+    } 80% {
+        background-color: rgb(207, 89, 188);
+    } 90% {
+        background-color: rgb(226, 107, 173);
+    } 100% {
+        background-color: rgb(70, 95, 163);
+    }
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    gap: 0 10px;
+    font-size: 24px;
+}
+
+article {
+    /* width: 500px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    border-radius: 20px; 
+
+    background-color: white;
+}
+
+h2 {
+    margin: 0 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+/* .energy5:hover {
+    background-color: rgb(170, 226, 144);
+}
+
+.energy4:hover {
+    background-color: rgb(188, 226, 144);
+}
+
+.energy3:hover {
+    background-color: rgb(221, 211, 124);
+}
+
+.energy2:hover {
+    background-color: rgb(226, 177, 144);
+    animation: breathe 2s ease-in-out infinite;
+} */

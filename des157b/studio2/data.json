@@ -1,0 +1,43 @@
+{
+    "10:00": {
+        "log": "began to do work",
+        "energy": 5
+    },
+    "10:15": {
+        "log": "good job doing work",
+        "energy": 5
+    },
+    "10:19": {
+        "log": "got up to go get a snack",
+        "energy": 3
+    } ,
+    "10:30": {
+        "log": "doing work with a snack",
+        "energy": 4
+    }, 
+    "10:48": {
+        "log": "got up to go to the restroom",
+        "energy": 4
+    },
+    "11:00": 
+    {
+        "log": "good job doing work",
+        "energy": 5
+    },
+    "11:15":{
+        "log": "still doing work yay!",
+        "energy": 5
+    }, 
+    "11:20": {
+        "log": "oh no, distracted by the internet",
+        "energy": 2
+    },
+    "11:30": {
+        "log": "still distracted, watching a YouTube video",
+        "energy": 3
+    },
+    "11:40": {
+        "log": "nice, got back to work yay!",
+        "energy": 5
+    }
+}
