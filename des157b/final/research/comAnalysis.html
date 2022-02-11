@@ -2,7 +2,36 @@
 <html lang="en">
 <head>
     <style>
+        body {
+            margin: auto;
+            width: 80%;
+        }
+
+        article {
+            border: 1px solid black;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            padding: 20px 40px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            border-bottom: 2px solid black;
+        }
         
+        a:hover {
+            border-bottom: 2px dashed black;
+        }
+
+        .images {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        img {
+            width: 500px;
+        }
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +39,23 @@
     <title>comparative analysis</title>
 </head>
 <body>
-    
+    <h1>Comparative Analysis</h1>
+    <article>
+        <h2><a href="http://www.chatmonchy.com/bestmemory/">best monchy & best memory</a></h2>
+        <div class="images">
+            <img src="images/best-monchy-best-memory1.png">
+            <img src="images/best-monchy-best-memory2.png">
+        </div>
+        <p>This project is a scrolling site with collective celebatory comment comments from fans for Chatmonchy's, a Japanese band, music. Scrolling down, the background moves with the foreground, presenting each comment on a graphic slice of lemon. I think the element of the bright colored trees and fruits were a good symbol for growth and happiness that Chatmonchy's music has brought. Because the dataset was big, the website indexed all the groups of comments using titles of their music and when clicked, it brings you to the tree of comments associated to that title. I think this works really well to organize such a big amount of information without visitors getting lost since the page seems continuous.</p>
+    </article>
+
+    <article>
+        <h2><a href="https://frontline.site/">Frontline</a></h2>
+        <div class="images">
+            <img src="images/frontline1.png">
+            <img src="images/frontline2.png">
+        </div>
+        <p>This project interactively displaying collected quotes in a expanable board format that allows visitors to explore the space and read by scrolling/dragging the mouse. I think that this way of displaying text data is fluid and doesn't overwhelm the visitors with too much information. The simplicity and cool toned colors matches the topic and the white words pop from the dark background. The story layout feels like a page of a book that has been opened from the large collection of other pages that holds similar stories.</p>
+    </article>
 </body>
 </html>
