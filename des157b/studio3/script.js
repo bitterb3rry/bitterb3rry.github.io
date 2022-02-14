@@ -1,5 +1,5 @@
 (function() {
-    AOS.init();
+    /* AOS.init(); */
 
 
     new kursor({
