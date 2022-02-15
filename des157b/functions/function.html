@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Examples</title>
+</head>
+<body>
+    <h1>Challenges</h1>
+    <h2>Challenge 1</h2>
+    <code>
+        <pre>
+            const greeting = (fname, lname) => return `Hello ${fname} ${lname};
+        </pre>
+    </code>
+
+    <h2>Challenge 2</h2>
+    <code>
+        <pre>
+            const square = x => return x*x;
+        </pre>
+    </code>
+
+    <h2>Challenge 3</h2>
+    <code>
+        <pre>
+            const largestNum = (num1, num2) => num1 > num2 ? num1 : num2;
+        </pre>
+    </code>
+
+    <h2>Challenge 4</h2>
+    <code>
+        <pre>
+            const animals = ["llama", "chicken", "dog", "cat"];
+
+            animals.forEach( (eachAnimal) => {
+                const upperCase = eachAnimal.toUpperCase();
+                console.log(upperCase);
+            })
+        </pre>
+    </code>
+
+    <h2>Challenge 5</h2>
+    <code>
+        <pre>
+            const scores = [5, 10, 15, 20];
+
+            console.log(scores.reduce( (accumulator, curValue) => accumulator + curValue ));
+        </pre>
+    </code>
+</body>
+<script>
+    // normal function
+    /* function makeUpperCase(aString) {
+        return aString.toUpperCase();
+    } */
+
+    // function expression
+    /* const makeUpperCase = function(aString) {
+        return aString.toUpperCase();
+    } */
+
+    // arrow function
+    const makeUpperCase = (aString) => {
+        return aString.toUpperCase();
+    }
+
+    console.log(makeUpperCase("here is a string"));
+
+    const fruit = ["banana", "apple", "lemon", "kiwi"];
+    const upperFruit = [];
+
+    fruit.forEach( (thisFruit) => {
+        upperFruit.push(thisFruit.toUpperCase());
+    })
+
+    console.log(upperFruit);
+
+    const employee = function(fname, lname, jobTitle) {
+        this.fname = fname;
+        this.lname = lname;
+        this.position = position;
+        this.fullname = () => {
+            `${fname}, ${lname}`;
+        }
+    }
+
+    const id1234 = new employee('Bob', 'Smith', 'Mechanic');
+
+    console.log(id1234.fname);
+    console.log(id1234.fullname());
+</script>
+</html>
