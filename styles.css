@@ -11,16 +11,8 @@ body {
 
 /* header css */
 #logo {
-    width: 200px;
-    height: 200px;
-}
-
-/* content css */
-
-main {
-    /* height: 60vh; */
-    font-family: 'Raleway', sans-serif;
-    color:palevioletred;
+    width: 150px;
+    height: 150px;
 }
 
 /* nav css */
@@ -41,12 +33,22 @@ nav ul li a {
 /* main css */
 
 main {
-    margin: 200px 0 0 75px;
+    width: 80vw;
+    height: 60vh;
+    margin-left: 75px;
+    padding-top: 155px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    font-family: 'Raleway', sans-serif;
+    color:#4B68CE;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 .project {
+    height: 360px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     margin: 30px;
@@ -56,30 +58,58 @@ main {
 section {
     width: 500px;
     height: 270px;  
-    background-size: 500px;
     background-color: antiquewhite;
 }
 
-#magic-hour {
+section:hover {
+    cursor: pointer;
+}
+
+#blockbuster-video section{
+    background-image: url('./images/works/blockbuster.png');
+    background-size: cover;
+}
+
+#magic-hour section {
     background-image: url('./images/works/magic-hour.png');
+    background-size: cover;
 }
 
 article {
-    width: 400px;
-    height: 150px;
-    margin-top: -40px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 50%;
-    background-color:lightsteelblue;
+    max-width: 300px;
+    margin-top: 100px;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid black;
+    border-radius: 48%;
+    background-color: #F9F9F9;
     text-align: center;
+}
+
+@keyframes articleUp {
+    0%{
+        margin-top: 100px;
+    } 100% {
+        margin-top: -50px;
+    }
+}
+
+@keyframes articleDown {
+    0%{
+        margin-top: -50px;
+    } 100% {
+        margin-top: 1000px;
+    }
+}
+
+article h1 {
+    font-size: 24px;
+    font-weight: 700;
 }
 
 article p {
     color: black;
-    font-size: 20px;
+    font-size: 16px;
 }
-
-
 
 /* footer css */
 
@@ -112,7 +142,7 @@ footer {
 
 #icons {
     width: 200px;
-    margin: 20px 0 10px 0;
+    margin: 15px 0 5px 0;
     display: flex;
     justify-content: space-between;
 }
