@@ -37,13 +37,16 @@ main {
     height: 60vh;
     margin-left: 75px;
     padding-top: 155px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     font-family: 'Raleway', sans-serif;
     color:#4B68CE;
     overflow: scroll;
     scrollbar-width: none;
+}
+
+#proj-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .project {
@@ -58,7 +61,13 @@ main {
 section {
     width: 500px;
     height: 270px;  
-    background-color: antiquewhite;
+    
+}
+
+#coming {
+    margin-top: -50px;
+    margin-left: 37%;
+    font-size: 24px;
 }
 
 section:hover {
