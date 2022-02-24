@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet"/>
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>flavors of emotion</title>
+</head>
+
+<body>
+    <header>
+        <h1>Flavors of Emotion</h1>
+        <nav>
+            <ul>
+                <li id="add-card-btn">add your flavor card</li>
+                <li id="background-btn">background</li>
+                <li>filter by flavor
+                    <ul>
+                        <li>sweet</li>
+                        <li>sour</li>
+                        <li>bitter</li>
+                        <li>spicy</li>
+                        <li>salty</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form id="add-card-form">
+            <div id="form-head">
+                <h2>add your flavor card</h2>
+                <button class="button cancel">cancel</button>
+            </div>
+            
+            <div id="input-container">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" >
+
+                <label for="note">Note</label>
+                <textarea id="note" name="note" placeholder="put your emotions here" maxlength="300"></textarea>
+
+                <select id="flavor" name="flavor">
+                    <option value="" disabled selected>Choose your flavor</option>
+                    <option value="sweet">sweet</option>
+                    <option value="sour">sour</option>
+                    <option value="bitter">bitter</option>
+                    <option value="spicy">spicy</option>
+                    <option value="salty">salty</option>
+                </select>
+            </div>
+
+            <input class="button" type="submit" value="Submit Card">
+        </form>
+        
+        <article id="background">
+            <button class="button cancel">cancel</button>
+        </article>
+        
+        <ul id="gallery-display"></ul>
+    </main>
+</body>
+</html>
