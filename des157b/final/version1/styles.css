@@ -1,0 +1,39 @@
+body {
+    display: flex;
+}
+
+header {
+    margin-left: 5%;
+}
+
+ul {
+    list-style: none;
+}
+
+#add-card-form {
+    display: none;
+    margin: 5%;
+    width: 900px;
+    height: 500px;
+    padding: 50px;
+    background-color: #FBE6C8;
+}
+
+#form-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+}
