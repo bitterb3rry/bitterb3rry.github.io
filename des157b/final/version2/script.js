@@ -60,7 +60,9 @@
         uploadInputForm(name, note, flavor);
 
         addCardForm.reset();
-        /* window.location.reload(); */
+
+        /* add loading screen before this reload to inform the user */
+        window.location.reload();
     });
 
 
