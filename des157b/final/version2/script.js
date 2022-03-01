@@ -2,11 +2,12 @@
     Parse.initialize('cVrkrv0qAq90F6K087Atwn2lV4KDBJcNwRgPRmMA', 'oJpekGOaM9kFp9Su3vrAAlH2ZuZVE2ndSACR4ZVz');
     Parse.serverURL = 'https://parseapi.back4app.com/';
 
+    const title = document.getElementById("title-box");
     const notesDisplay = document.querySelector("main ul");
     const addCardBtn = document.getElementById("add-card-btn");
     const addCardForm = document.getElementById("add-card-form");
     const background = document.getElementById("background");
-    const backgroundBtn = document.getElementById("background-btn");
+    /* const backgroundBtn = document.getElementById("background-btn"); */
 
 /*     const cancel = document.getElementsByClassName("cancel");
 
@@ -16,6 +17,20 @@
         addCardForm.style.display = "none";
         background.style.display = "none";
     }) */
+
+    addCardBtn.addEventListener("mouseover", function(event) {
+        addCardBtn.src = "./media/add-card-btn-action.svg";
+    });
+    addCardBtn.addEventListener("mouseout", function(event) {
+        addCardBtn.src = "./media/add-card-btn.svg";
+    });
+
+    title.addEventListener("mouseover", function(event) {
+        title.src = "./media/title-box-action.svg";
+    });
+    title.addEventListener("mouseout", function(event) {
+        title.src = "./media/title-box.svg";
+    });
 
     addCardBtn.addEventListener("click", function(event) {
         event.preventDefault();
@@ -102,10 +117,10 @@
 
     displayCards();
 
-    backgroundBtn.addEventListener("click", function(event) {
+/*     backgroundBtn.addEventListener("click", function(event) {
         event.preventDefault();
 
         background.style.display = "block";
         addCardForm.style.display = "none";
-    })
+    }) */
 })();

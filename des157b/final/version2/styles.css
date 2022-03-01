@@ -7,6 +7,7 @@ body {
 
 header {
     margin-left: 5%;
+    position: absolute;
 }
 
 ul {
@@ -22,6 +23,10 @@ nav ul li:hover {
     width: 250px;
 }
 
+#add-card-btn:hover {
+    transform: scale(1.1);
+}
+
 /* ----------------------- */
 
 #add-card-form, #background {
@@ -32,6 +37,7 @@ nav ul li:hover {
     height: 500px;
     padding: 50px;
     background-color: #FBE6C8;
+    z-index: 1;
 }
 
 #form-head {
@@ -106,8 +112,10 @@ input[type=submit] {
 }
 
 /* display port css */
+
 #gallery-display {
-    margin-left: 80px;
+    margin-left: 400px;
+    position: absolute;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 80px;
