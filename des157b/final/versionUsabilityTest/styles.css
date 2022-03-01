@@ -1,0 +1,153 @@
+body {
+    background-color: #FCF9F2;
+    display: flex;
+}
+
+/* header css */
+
+header {
+    margin-left: 5%;
+    position: absolute;
+}
+
+ul {
+    list-style: none;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+}
+
+#title-box {
+    margin-top: 25px;
+    width: 250px;
+}
+
+#add-card-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ----------------------- */
+
+#add-card-form {
+    position: absolute;
+    top: 50px;
+    left: 400px;    
+    display: none;
+
+    width: 900px;
+    height: 500px;
+    padding: 50px;
+    background-color: #FBE6C8;
+    z-index: 1;
+}
+
+#form-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+#input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-family: Verdana;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #922121;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+textarea, input { 
+    outline: none; 
+    margin-bottom: 15px;
+    padding:5px;
+    border: 2px #922121 solid;
+    border-radius: 5px;
+}
+
+#name {
+    width: 250px;
+}
+
+#note {
+    max-width: 890px;
+    min-height: 150px;
+    max-height: 250px;
+}
+
+#flavor {
+    width: 100px;
+    height: 30px;
+    padding: 0 20px;
+    border: 2px #922121 solid;
+    border-radius: 5px;
+    background-color: #FEEFE7;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+input[type=submit] {
+    position: relative;
+    left: 795px;
+}
+
+#background {
+    display: none;
+}
+
+.button {
+    height: 35px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0;
+    background-color: #922121;
+    color: #FEEFE7;
+    font-family: Verdana;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+/* display port css */
+
+#gallery-display {
+    margin-left: 400px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+}
+
+#gallery-display li{
+    margin-bottom: 25px;
+}
+
+.displayed-card {
+    height: max-content;
+}
+
+.card-flavor {
+    position: relative;
+    top: 30px;
+    left: 130px;
+    max-width: fit-content;
+    padding: 3px 5px;
+    border: 1px #922121 solid;
+    background-color: #FBE6C8;
+    color: #922121;
+    font-family: Verdana;
+}
+.card-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 203px;
+    background-image: url("media/blob.svg");
+    background-size: cover;
+}
