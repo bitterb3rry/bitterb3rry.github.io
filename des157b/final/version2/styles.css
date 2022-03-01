@@ -1,6 +1,9 @@
 body {
+    background-color: #FCF9F2;
     display: flex;
 }
+
+/* header css */
 
 header {
     margin-left: 5%;
@@ -12,8 +15,14 @@ ul {
 
 nav ul li:hover {
     cursor: pointer;
-    background-color: bisque;
 }
+
+#title-box {
+    margin-top: 25px;
+    width: 250px;
+}
+
+/* ----------------------- */
 
 #add-card-form, #background {
     position: absolute;
@@ -97,14 +106,25 @@ input[type=submit] {
 }
 
 /* display port css */
+#gallery-display {
+    margin-left: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
+}
+
 #gallery-display li{
     margin-bottom: 25px;
 }
 
+.displayed-card {
+    height: max-content;
+}
+
 .card-flavor {
     position: relative;
-    top: 20px;
-    left: 90px;
+    top: 30px;
+    left: 130px;
     max-width: fit-content;
     padding: 3px 5px;
     border: 1px #922121 solid;
@@ -116,8 +136,8 @@ input[type=submit] {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 203px;
     background-image: url("media/blob.svg");
     background-size: cover;
 }

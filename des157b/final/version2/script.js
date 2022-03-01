@@ -87,6 +87,10 @@
                     <div class="card-note">
                         <p>${note}</p>
                     </div>
+
+                    <!-- after every note, add a swatch -->
+                    <div>
+                    </div>
                 `;
                 
                 notesDisplay.append(displayCard);
