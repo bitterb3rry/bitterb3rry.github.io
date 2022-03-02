@@ -11,7 +11,73 @@
 </head>
 
 <body>
-    <header>
+
+    <div class="show-display" id="user-instruction">
+        <p>
+            Hi, welcome to user testing for flavors of emotion! 
+            <br><br>
+            This session is used for me to evaluate how potential visitors of the site are able to interact and understand. It is also for me to find areas of improvement in my design and code. In no way is it to test your abilities to do any tasks during this session. The current project is a prototype in progress for the final version. 
+            <br><br>
+            Your 3 tasks are:
+        </p>
+
+        <ol>
+            <li>Read through the opening.</li>
+            <li>Submit a card.</li>
+            <li>View filtered responses for Sweet.</li>
+        </ol>
+
+        <p>
+            Enjoy! 
+        </p>
+
+        <button class="button" id="close-instruction">Let's go</button>
+
+    </div>
+
+    <div class="hidden-display" id="characters">
+
+        <div id="character-container">
+            <div id="line1" >
+                <p class="pinyin">tián</p>
+                <p class="chinese">甜</p> 
+            </div>
+            
+            <div id="line2">
+                <p class="pinyin">suān</p>
+                <p class="chinese">酸</p>
+            </div>
+            
+            <div id="line3" >
+                <p class="pinyin">kǔ</p>
+                <p class="chinese">苦</p> 
+            </div>
+
+            <div id="line4" >
+                <p class="pinyin">xián</p>
+                <p class="chinese">辣</p> 
+            </div>
+
+            <div id="line5" >
+                <p class="pinyin">là</p>
+                <p class="chinese">咸</p>
+            </div>
+        </div>
+
+        <button class="button" id="btn-to-bg">next</button>
+    </div>
+
+    <div class="hidden-display" id="background">
+        <p> 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="button" id="btn-to-purpose">next</button>
+    </div>
+
+    <div class="hidden-display" id="purpose">
+        <p> 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <button class="button" id="btn-to-main">enter</button>
+    </div>
+
+    <header class="hidden-display">
         <!-- <h1>Flavors of Emotion</h1> -->
         <img id="title-box" src="./media/title-box.svg" alt="title graphic">
         <nav>
@@ -32,11 +98,11 @@
         </nav>
     </header>
 
-    <main>
+    <main class="hidden-display">
         <form id="add-card-form">
             <div id="form-head">
                 <h2>add your flavor card</h2>
-                <button class="button cancel">cancel</button>
+                <button class="button" id="cancel-form">cancel</button>
             </div>
             
             <div id="input-container">
@@ -46,21 +112,40 @@
                 <label for="note">Note</label>
                 <textarea id="note" name="note" placeholder="put your emotions here" maxlength="300" required></textarea>
 
-                <select id="flavor" name="flavor" required>
+                <!-- <select id="flavor" name="flavor" required>
                     <option value="" disabled selected>Choose your flavor</option>
                     <option value="sweet">sweet</option>
                     <option value="sour">sour</option>
                     <option value="bitter">bitter</option>
                     <option value="spicy">spicy</option>
                     <option value="salty">salty</option>
-                </select>
+                </select> -->
+
+                <label for="flavor">Choose your flavor</label>
+                <div id="flavor-container">
+                    
+                    <input type="radio" name="sweet" value="sweet">
+                    <label for="sweet">sweet</label>
+                    
+                    <input type="radio"  name="sour" value="sour">
+                    <label for="sour">sour</label>
+                    
+                    <input type="radio" name="bitter" value="bitter">
+                    <label for="bitter">bitter</label>
+                    
+                    <input type="radio" name="salty" value="salty">
+                    <label for="salty">salty</label>
+                    
+                    <input type="radio" name="spicy" value="spicy">
+                    <label for="spicy">spicy</label>
+                </div>
             </div>
 
             <input class="button" type="submit" value="Submit Card">
         </form>
         
-        <article id="background">
-            <button class="button cancel">cancel</button>
+        <article id="background-overlay">
+            <button class="button" id="cancel-bg">cancel</button>
         </article>
         
         <ul id="gallery-display"></ul>

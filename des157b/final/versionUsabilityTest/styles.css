@@ -1,7 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+
 body {
-    background-color: #FCF9F2;
-    display: flex;
+    background-color: rgb(27, 11, 11);
 }
+
+.hidden-display {
+    display: none;
+}
+
+.show-display {
+    display: inline;
+}
+
+.hidden-opacity {
+    opacity: 0;
+}
+
+.show-opacity {
+    opacity: 100%;
+}
+
+/* user test */
+
+#user-instruction {
+/*     display: block; */
+    position: absolute;
+    top: 50px;
+    left: 60px;
+    background-color: #FCF9F2;
+    width: 900px;
+    height: 550px;
+    padding: 30px 200px;
+}
+
+/* characters */
+
+#character-container {
+    margin-top: 18%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#character-container div {
+    margin: 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pinyin {
+    margin: 0;
+    font-size: 28px;
+    color: #b73434;
+}
+
+.chinese {
+    margin: 0;
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 122px;
+    color: #b73434;
+}
+
+#btn-to-bg, #btn-to-purpose, #btn-to-main {
+    position: relative;
+    /* bottom: 50px;
+    right: 50px; */
+
+    top: 150px;
+    left: 1300px;
+}
+
+/* ----------------------- */
+
+
+#background p, #purpose p {
+    width: 700px;
+    text-align: center;
+    margin-top: 18%;
+    margin-left: 28%;
+    color: #FCF9F2;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
 
 /* header css */
 
@@ -20,7 +102,7 @@ nav ul li:hover {
 
 #title-box {
     margin-top: 25px;
-    width: 250px;
+    width: 260px;
 }
 
 #add-card-btn:hover {
@@ -29,6 +111,7 @@ nav ul li:hover {
 
 /* ----------------------- */
 
+/* add card form css */
 #add-card-form {
     position: absolute;
     top: 50px;
@@ -90,12 +173,28 @@ textarea, input {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#flavor-container {
+    margin-top: 10px;
+}
+
+input[type=radio]+label {
+    padding: 5px;
+    border: 1px solid #922121;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input[type=radio]+label:hover, input[type=radio]:checked+label {
+    color: #FCF9F2;
+    background-color: #922121;
+}
+
 input[type=submit] {
     position: relative;
     left: 795px;
 }
 
-#background {
+#background-overlay {
     display: none;
 }
 
@@ -112,6 +211,8 @@ input[type=submit] {
 .button:hover {
     cursor: pointer;
 }
+
+/* ----------------------- */
 
 /* display port css */
 
