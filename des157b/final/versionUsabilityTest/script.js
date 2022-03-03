@@ -27,6 +27,8 @@
     const cancelForm = document.getElementById("cancel-form");
     const cancelBg = document.getElementById("cancel-bg");
 
+    const sweet = document.getElementById("fltr-sweet");
+
     /* user test overlay */
 
     closeInstruct.addEventListener("click", function(event) {
@@ -50,36 +52,36 @@
     toBg.addEventListener("click", function(event) {
         event.preventDefault();
 
-        /* toBg.classList.remove = "show-display"; */
         charactersPg.className = "hidden-display";
         
-        /* toPurpose.classList.remove = "hidden-display"; */
-        backgroundPg.className = "show-display";
-    });
-
-    toPurpose.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        /* toBg.classList.remove = "show-display"; */
-        backgroundPg.className = "hidden-display";
-        
-        /* toPurpose.classList.remove = "hidden-display"; */
-        purposePg.className = "show-display";
-    });
-
-    toMain.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        /* toBg.classList.remove = "show-display"; */
-        purposePg.className = "hidden-display";
-        
-        /* toPurpose.classList.remove = "hidden-display"; */
+        /* backgroundPg.className = "show-display"; */
+        /* purposePg.className = "show-display" */
         header.className = "show-display";
         main.className = "show-display";
 
         body.style.backgroundColor = "#FCF9F2";
         body.style.display = "flex";
     });
+
+/*     toPurpose.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        backgroundPg.className = "hidden-display";
+
+        purposePg.className = "show-display";
+    }); */
+
+/*     toMain.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        purposePg.className = "hidden-display";
+        
+        header.className = "show-display";
+        main.className = "show-display";
+
+        body.style.backgroundColor = "#FCF9F2";
+        body.style.display = "flex";
+    }); */
     /* ---------------------------------------------------- */
 
     /* interactive nav elements */
@@ -114,17 +116,19 @@
 
         var name = document.getElementById("name").value;
         var note = document.getElementById("note").value;
-        /* var flavor = document.getElementById("flavor").value; */
+        var flavor = document.getElementById("flavor").value;
 
         // check if there is input
-        /* uploadInputForm(name, note, flavor); */
-        uploadInputForm(name, note);
+        uploadInputForm(name, note, flavor);
+       /*  uploadInputForm(name, note); */
 
         addCardForm.reset();
         document.querySelectorAll("#flavor-container input").checked= "false";
 
         /* add loading screen before this reload to inform the user */
-        window.location.reload();
+        /* window.location.reload(); */
+        notesDisplay.innerHTML = ``;
+        displayCards();
     });
 
     /* close overlays */
@@ -146,7 +150,7 @@
 
         card.set("Name", name);
         card.set("Notes", note);
-        /* card.set("flavor", flavor); */
+        card.set("flavor", flavor);
 
         card.save().then((card) => {
             // Success
@@ -193,4 +197,14 @@
     };
 
     displayCards();
+
+    /* filters */
+    /* sweet.addEventListener("click", function(event) {
+        const notes = Parse.Object.extend('Notes');
+        const query = new Parse.Query(notes);
+        try {
+            const results = await query.find();
+            results.forEach(function(eachCard) {}
+        }
+    }); */
 })();

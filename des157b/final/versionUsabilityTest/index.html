@@ -23,7 +23,7 @@
 
         <ol>
             <li>Read through the opening.</li>
-            <li>Submit a card.</li>
+            <li>Submit a card and refresh the page to see it.</li>
             <li>View filtered responses for Sweet.</li>
         </ol>
 
@@ -39,41 +39,57 @@
 
         <div id="character-container">
             <div id="line1" >
-                <p class="pinyin">tián</p>
+                <p class="alphabet">tián</p>
                 <p class="chinese">甜</p> 
+                <p class="alphabet">sweet</p> 
             </div>
             
             <div id="line2">
                 <p class="pinyin">suān</p>
                 <p class="chinese">酸</p>
+                <p class="alphabet">sour</p> 
             </div>
             
             <div id="line3" >
                 <p class="pinyin">kǔ</p>
                 <p class="chinese">苦</p> 
+                <p class="alphabet">bitter</p> 
             </div>
 
             <div id="line4" >
                 <p class="pinyin">xián</p>
                 <p class="chinese">辣</p> 
+                <p class="alphabet">spicy</p> 
             </div>
 
             <div id="line5" >
                 <p class="pinyin">là</p>
                 <p class="chinese">咸</p>
+                <p class="alphabet">salty</p> 
             </div>
         </div>
 
-        <button class="button" id="btn-to-bg">next</button>
+        <p id="taste">
+            Emotions are like taste.
+            <br/><br/>
+            &#9;Like sweet love.<br/>
+            &#9;As sour as mixed feelings.<br/>
+            &#9;A bitter truth.<br/>
+            &#9;Going on a spicy adventure.<br/>
+            &#9;Salty in envy.<br/>
+            <br/><br/>
+            It's part of life that we're supposed to feel a taste of them.
+        </p>
+
+        <button class="button" id="btn-to-bg">enter</button>
     </div>
 
     <div class="hidden-display" id="background">
-        <p> 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p></p>
         <button class="button" id="btn-to-purpose">next</button>
     </div>
 
     <div class="hidden-display" id="purpose">
-        <p> 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <button class="button" id="btn-to-main">enter</button>
     </div>
 
@@ -83,6 +99,15 @@
         <nav>
             <ul>
                 <li><img id="add-card-btn" src="./media/add-card-btn.svg" alt="add a card button"></li>
+                <li>filter by flavor
+                    <ul>
+                        <li id="fltr-sweet">sweet</li>
+                        <li id="fltr-sour">sour</li>
+                        <li id="fltr-bitter">bitter</li>
+                        <li id="fltr-spicy">spicy</li>
+                        <li id="fltr-salty">salty</li>
+                    </ul>
+                </li>
                 <!-- <li id="add-card-btn">add your flavor card</li>
                 <li id="background-btn">background</li>
                 <li>filter by flavor
@@ -112,16 +137,16 @@
                 <label for="note">Note</label>
                 <textarea id="note" name="note" placeholder="put your emotions here" maxlength="300" required></textarea>
 
-                <!-- <select id="flavor" name="flavor" required>
+                <select id="flavor" name="flavor" required>
                     <option value="" disabled selected>Choose your flavor</option>
                     <option value="sweet">sweet</option>
                     <option value="sour">sour</option>
                     <option value="bitter">bitter</option>
                     <option value="spicy">spicy</option>
                     <option value="salty">salty</option>
-                </select> -->
+                </select>
 
-                <label for="flavor">Choose your flavor</label>
+                <!-- <label for="flavor">Choose your flavor (1)</label>
                 <div id="flavor-container">
                     
                     <input type="radio" name="sweet" value="sweet">
@@ -138,7 +163,7 @@
                     
                     <input type="radio" name="spicy" value="spicy">
                     <label for="spicy">spicy</label>
-                </div>
+                </div> -->
             </div>
 
             <input class="button" type="submit" value="Submit Card">
