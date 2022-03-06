@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <div class="hidden-display" id="characters">
+    <div class="show-display" id="characters">
 
-        <div id="character-container">
+        <!-- <div id="character-container">
             <div id="line1" >
                 <p class="alphabet">tián</p>
                 <p class="chinese">甜</p> 
@@ -43,7 +43,9 @@
                 <p class="chinese">咸</p>
                 <p class="alphabet">salty</p> 
             </div>
-        </div>
+        </div> -->
+
+        <div id="hero-image"></div>
 
         <p id="taste">
             Emotions are like taste.
@@ -53,29 +55,22 @@
             &#9;A bitter truth.<br/>
             &#9;Going on a spicy adventure.<br/>
             &#9;Salty in envy.<br/>
-            <br/><br/>
+            <br/>
             It's part of life that we're supposed to feel a taste of them.
         </p>
 
-        <button class="button" id="btn-to-bg">enter</button>
-    </div>
-
-    <div class="hidden-display" id="background">
-        <p></p>
-        <button class="button" id="btn-to-purpose">next</button>
-    </div>
-
-    <div class="hidden-display" id="purpose">
         <button class="button" id="btn-to-main">enter</button>
     </div>
 
     <header class="hidden-display">
         <!-- <h1>Flavors of Emotion</h1> -->
-        <img id="title-box" src="./media/title-box.svg" alt="title graphic">
+        <img id="title-box" src="./media/color-title-box.svg" alt="title graphic">
         <nav>
             <ul>
-                <li><img id="add-card-btn" src="./media/add-card-btn.svg" alt="add a card button"></li>
-                <li>filter by flavor
+                <li><img id="add-card-btn" src="./media/add-card-btn.svg" alt="click to add a card"></li>
+                <li><img id="about-btn" src="./media/about.svg" alt="click to read about this project"></li>
+                
+                <!-- <li>filter by flavor
                     <ul>
                         <li id="fltr-sweet">sweet</li>
                         <li id="fltr-sour">sour</li>
@@ -83,7 +78,7 @@
                         <li id="fltr-spicy">spicy</li>
                         <li id="fltr-salty">salty</li>
                     </ul>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </header>
@@ -91,7 +86,7 @@
     <main class="hidden-display">
         <form id="add-card-form">
             <div id="form-head">
-                <h2>add your flavor card</h2>
+                <h2>add your card</h2>
                 <button class="button" id="cancel-form">cancel</button>
             </div>
             
@@ -100,7 +95,9 @@
                 <input type="text" id="name" name="name" required>
 
                 <label for="note">Note</label>
-                <textarea id="note" name="note" placeholder="put your emotions here" maxlength="300" required></textarea>
+                <p>It can be your emotion right now or some emotions that you have been wanting to get out of your system.</p>
+                <textarea id="note" name="note" placeholder="put your emotions here" value="" maxlength="280" required></textarea>
+                <p id="characters-left"><span id="char-count">280</span>/280 characters</p>
 
                 <select id="flavor" name="flavor" required>
                     <option value="" disabled selected>Choose your flavor</option>
@@ -134,11 +131,38 @@
             <input class="button" type="submit" value="Submit Card">
         </form>
         
-        <article id="background-overlay">
-            <button class="button" id="cancel-bg">cancel</button>
+        <article id="about-overlay">
+            <h2>Notes on Inspiration</h2>
+            <p>
+                The idea of this project came about during the class brainstorming session for this project when someone put out the idea of cultural foods. I thought back to what I know about my Chinese roots and thought about all the simple ingredients and tools that are coined as the essential to cooking a meal: firewood, rice, oil, salt, and vinegar. When I was young and consuming a lot of Asian drama, I remembered one called The Season of Fate (the direct translation from the Chinese name would be 5 flavors of life). These 5 flavors are sweet, sour, bitter, spicy, and salty but there are also a couple of variations with freshness and umami.
+            </p>
+
+            <h2>Background Information</h2>
+            <p>
+                In the Chinese language, there are phrases to describe one's emotions in which characters that make up the phrase include one of the 5 senses of taste.
+                
+                (some examples)
+
+                Modern English also has similar ideas like bittersweet moments, sour taste in the mouth, or calling someone salty.
+            </p>
+            
+            <h2>Final Message</h2>
+            <p>
+                No matter who we are, where we come from, and our individual opinions, one thing we all have in common is the need for food and c’mon, we love to eat food! 
+            </p>
+                
+            <p>
+                Combining this all, I present Flavors of Emotion, a platform for sharing emotions in relation to a flavor.
+            </p>
+                
+            <button class="button" id="close-about">close</button>
         </article>
         
-        <ul id="gallery-display"></ul>
+        <ul id="gallery-display">
+           
+        </ul>
+
+        <img id="refresh" src="./media/refresh.svg" alt="click to refresh displayed cards">
     </main>
 </body>
 </html>

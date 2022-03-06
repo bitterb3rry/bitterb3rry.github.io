@@ -4,15 +4,8 @@
 
     const body = document.querySelector("body");
 
-    const instruct = document.getElementById("user-instruction");
-    const closeInstruct = document.getElementById("close-instruction");
-
     const charactersPg = document.getElementById("characters");
-    const backgroundPg = document.getElementById("background");
-    const purposePg = document.getElementById("purpose");
 
-    const toBg = document.getElementById("btn-to-bg");
-    const toPurpose = document.getElementById("btn-to-purpose");
     const toMain = document.getElementById("btn-to-main");
 
     const header = document.querySelector("header");
@@ -21,22 +14,16 @@
     const title = document.getElementById("title-box");
     const notesDisplay = document.querySelector("main ul");
     const addCardBtn = document.getElementById("add-card-btn");
+    const aboutBtn = document.getElementById("about-btn");
     const addCardForm = document.getElementById("add-card-form");
-    const backgroundOverlay = document.getElementById("background-overlay");
+    const aboutOverlay = document.getElementById("about-overlay");
+
+    const note = document.getElementById("note");
 
     const cancelForm = document.getElementById("cancel-form");
-    const cancelBg = document.getElementById("cancel-bg");
+    const closeAbout = document.getElementById("close-about");
 
-    const sweet = document.getElementById("fltr-sweet");
-
-    /* user test overlay */
-
-    closeInstruct.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        instruct.className = "hidden-display";
-        charactersPg.className = "show-display";
-    })
+    const refresh = document.getElementById("refresh");
 
     /* opening js */
 /*     const line1 = document.querySelector('#line1');
@@ -48,14 +35,11 @@
         line: [line1, line2, line3]
     } */
 
-    /* opening nav buttons */
-    toBg.addEventListener("click", function(event) {
+    toMain.addEventListener("click", function(event) {
         event.preventDefault();
 
         charactersPg.className = "hidden-display";
         
-        /* backgroundPg.className = "show-display"; */
-        /* purposePg.className = "show-display" */
         header.className = "show-display";
         main.className = "show-display";
 
@@ -63,28 +47,14 @@
         body.style.display = "flex";
     });
 
-/*     toPurpose.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        backgroundPg.className = "hidden-display";
-
-        purposePg.className = "show-display";
-    }); */
-
-/*     toMain.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        purposePg.className = "hidden-display";
-        
-        header.className = "show-display";
-        main.className = "show-display";
-
-        body.style.backgroundColor = "#FCF9F2";
-        body.style.display = "flex";
-    }); */
-    /* ---------------------------------------------------- */
-
     /* interactive nav elements */
+    title.addEventListener("mouseover", function(event) {
+        title.src = "./media/color-title-box-action.svg";
+    });
+    title.addEventListener("mouseout", function(event) {
+        title.src = "./media/color-title-box.svg";
+    });
+
     addCardBtn.addEventListener("mouseover", function(event) {
         addCardBtn.src = "./media/add-card-btn-action.svg";
     });
@@ -92,11 +62,11 @@
         addCardBtn.src = "./media/add-card-btn.svg";
     });
 
-    title.addEventListener("mouseover", function(event) {
-        title.src = "./media/title-box-action.svg";
+    aboutBtn.addEventListener("mouseover", function(event) {
+        aboutBtn.src = "./media/about-action.svg";
     });
-    title.addEventListener("mouseout", function(event) {
-        title.src = "./media/title-box.svg";
+    aboutBtn.addEventListener("mouseout", function(event) {
+        aboutBtn.src = "./media/about.svg";
     });
 
     /* open input form */
@@ -104,7 +74,45 @@
         event.preventDefault();
         /* console.log("btn clicked") */
         addCardForm.style.display = "block";
+        aboutOverlay.style.display = "none";
     });
+
+    cancelForm.addEventListener("click", function(event) {
+        event.preventDefault();
+        addCardForm.reset();
+        document.querySelectorAll("#flavor-container input").checked= "false";
+        addCardForm.style.display = "none";
+    })
+
+    aboutBtn.addEventListener("click", function(event) {
+        event.preventDefault();
+        addCardForm.style.display = "none";
+        aboutOverlay.style.display = "block";
+    })
+
+    closeAbout.addEventListener("click", function(event) {
+        event.preventDefault();
+        aboutOverlay.style.display = "none";
+    })
+
+    note.addEventListener("keyup", function(event) {
+        event.preventDefault();
+
+        var curLen = note.value.length;
+        var charsLeft = 280 - curLen;
+        var count = document.getElementById("char-count");
+        count.innerHTML = charsLeft;
+    });
+
+    function refreshNotes() {
+        notesDisplay.innerHTML = ``;
+        displayCards();
+    }
+
+    // request to refresh notes 
+    refresh.addEventListener('click', function(event) {
+        refreshNotes();
+    })
 
     // listen for input form submit
     addCardForm.addEventListener('submit', function(event){
@@ -115,11 +123,11 @@
         addCardForm.style.display = "none";
 
         var name = document.getElementById("name").value;
-        var note = document.getElementById("note").value;
+        var noteVal = note.value;
         var flavor = document.getElementById("flavor").value;
 
         // check if there is input
-        uploadInputForm(name, note, flavor);
+        uploadInputForm(name, noteVal, flavor);
        /*  uploadInputForm(name, note); */
 
         addCardForm.reset();
@@ -127,22 +135,9 @@
 
         /* add loading screen before this reload to inform the user */
         /* window.location.reload(); */
-        notesDisplay.innerHTML = ``;
-        displayCards();
+        
+        refreshNotes();
     });
-
-    /* close overlays */
-    cancelForm.addEventListener("click", function(event) {
-        event.preventDefault();
-        addCardForm.reset();
-        document.querySelectorAll("#flavor-container input").checked= "false";
-        addCardForm.style.display = "none";
-    })
-
-    cancelBg.addEventListener("click", function(event) {
-        event.preventDefault();
-        backgroundOverlay.style.display = "none";
-    })
 
     /* database functions */
     async function uploadInputForm(name, note, flavor) {
@@ -158,22 +153,60 @@
         }, (error) => {
             // Save fails
             console.log('Failed to create new object, with error code: ' + error.message);
-        });
+        })
+    }
+    
+/*     function calcFontSize(len) {
+        if (len <= 70) {
+            return "20px";
+        } else if (len <= 140 ) {
+            return "24px";
+        } else if (len <= 210) {
+            return "28px";
+        } else { ß
+            return "32px";
+        }
+    } */
+
+    function setSwatch(flav) {
+        switch(flav) {
+            case "sweet":
+                return 0;
+            case "sour":
+                return 1;
+            case "bitter":
+                return 2;
+            case "spicy":
+                return 3;
+            case "salty":
+                return 4;
+        }
+    }
+
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
     async function displayCards() {
         const notes = Parse.Object.extend('Notes');
         const query = new Parse.Query(notes);
+
+        const swatches = ["media/orange-swatch.svg", "media/green-swatch.svg" , "media/yellow-swatch.svg", "media/red-swatch.svg", "media/blue-swatch.svg"];
+
         try {
             const results = await query.find();
             results.forEach(function(eachCard) {
                 // get the note, flavor, and name
                 const id = eachCard.id;
-                const note = eachCard.get('Notes');
+                const cardNote = eachCard.get('Notes');
                 const flavor = eachCard.get('flavor');
                 const displayCard = document.createElement("li");
                 displayCard.setAttribute("class", `displayed-card`);
                 displayCard.setAttribute("id", `r-${id}`);
+
+                const swatchNum = setSwatch(flavor);
                 
                 displayCard.innerHTML = `
                     <div class="card-flavor">
@@ -181,13 +214,25 @@
                     </div>    
 
                     <div class="card-note">
-                        <p>${note}</p>
+                        <p>${cardNote}</p>
                     </div>
 
                     <!-- after every note, add a swatch -->
-                    <div>
+                    <div class="swatch">
+                        <img src=${swatches[swatchNum]} alt="flavor swatch">
                     </div>
                 `;
+
+                /* vary font size of the words based on length 
+                    - length by getting length of note
+                    - scale it by a base font size
+                    - set that in the css style
+                */
+
+                    /* var len = cardNote.length;
+                    document.calcFontSize(len); */
+
+
                 
                 notesDisplay.append(displayCard);
             });
@@ -207,4 +252,6 @@
             results.forEach(function(eachCard) {}
         }
     }); */
+
+    addCardForm.reset();
 })();

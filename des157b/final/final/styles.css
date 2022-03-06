@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
 
 body {
-    background-color: rgb(27, 11, 11);
+    /* background-color: rgb(27, 11, 11); */
+    background-color: #FCF9F2;
 }
 
 .hidden-display {
@@ -18,19 +19,6 @@ body {
 
 .show-opacity {
     opacity: 100%;
-}
-
-/* user test */
-
-#user-instruction {
-/*     display: block; */
-    position: absolute;
-    top: 50px;
-    left: 60px;
-    background-color: #FCF9F2;
-    width: 900px;
-    height: 550px;
-    padding: 30px 200px;
 }
 
 /* characters */
@@ -63,10 +51,16 @@ body {
     color: #b73434;
 }
 
-#btn-to-bg, #btn-to-purpose, #btn-to-main {
+/* #btn-to-bg, #btn-to-purpose, #btn-to-main {
     position:absolute;
     bottom: 50px;
     right: 50px;
+} */
+
+#hero-image {
+    width: 100vw;
+    height: 100vh;    
+    background: url("./media/flavors.svg") no-repeat center;
 }
 
 /* ----------------------- */
@@ -75,10 +69,8 @@ body {
 #taste, #background p, #purpose p {
     width: 700px;
     text-align: center;
-    /* margin-top: 18%; */
-    margin-top: 50px;
     margin-left: 28%;
-    color: #FCF9F2;
+    /* color: #FCF9F2; */
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 24px;
 }
@@ -88,11 +80,15 @@ body {
 
 header {
     margin-left: 5%;
-    position: absolute;
+    position: fixed;
 }
 
 ul {
     list-style: none;
+}
+
+li {
+    margin-top: 20px;
 }
 
 nav ul li:hover {
@@ -108,11 +104,23 @@ nav ul li:hover {
     transform: scale(1.1);
 }
 
+#add-card-btn {
+    
+}
+
+#about-btn {
+    margin-left: -30px;
+}
+
+#about-btn:hover {
+    transform: scale(1.1);
+}
+
 /* ----------------------- */
 
-/* add card form css */
-#add-card-form {
-    position: absolute;
+/* overlay css */
+#add-card-form, #about-overlay {
+    position: fixed;
     top: 50px;
     left: 400px;    
     display: none;
@@ -124,6 +132,7 @@ nav ul li:hover {
     z-index: 1;
 }
 
+/* add card form css */
 #form-head {
     display: flex;
     justify-content: space-between;
@@ -136,6 +145,7 @@ nav ul li:hover {
 
 h2 {
     font-family: Verdana;
+    color: #922121;
 }
 
 label {
@@ -163,9 +173,9 @@ textarea, input {
 }
 
 #flavor {
-    width: 100px;
+    width: fit-content;
     height: 30px;
-    padding: 0 20px;
+    padding: 0 10px;
     border: 2px #922121 solid;
     border-radius: 5px;
     background-color: #FEEFE7;
@@ -193,10 +203,6 @@ input[type=submit] {
     left: 795px;
 }
 
-#background-overlay {
-    display: none;
-}
-
 .button {
     height: 35px;
     padding: 5px 10px;
@@ -211,16 +217,25 @@ input[type=submit] {
     cursor: pointer;
 }
 
+#about-overlay {
+    display: none;
+}
+
+#close-about {
+    position: relative;
+    left: 850px;
+}
+
 /* ----------------------- */
 
 /* display port css */
 
 #gallery-display {
-    margin-left: 400px;
-    position: absolute;
+    margin-left: 450px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 80px;
+    row-gap: 0;
+    column-gap: 100px;
 }
 
 #gallery-display li{
@@ -233,21 +248,49 @@ input[type=submit] {
 
 .card-flavor {
     position: relative;
-    top: 30px;
-    left: 130px;
+    top: 50px;
+    left: 140px;
     max-width: fit-content;
-    padding: 3px 5px;
+    padding: 3px 10px;
     border: 1px #922121 solid;
-    background-color: #FBE6C8;
+    background-color: #FCF9F2;
+    /* background-color: #FBE6C8; */
     color: #922121;
     font-family: Verdana;
+    font-size: 18px;
 }
 .card-note {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 203px;
-    background-image: url("media/blob.svg");
+    width: 210px;
+    height: 218px;
+    background-image: url("media/blob2.svg");
     background-size: cover;
+    overflow-wrap: break-word;
+}
+
+.card-note p {
+    text-align: center;
+    color: rgb(34, 14, 14);
+    background-color: #FCF9F2;
+    font-size: 16px;
+}
+
+/* .swatch {
+    margin-top: 20px;
+    width: 150px;
+    height: 80px;
+} */
+
+#refresh {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+#refresh:hover {
+    transform: scale(1.1);
 }
