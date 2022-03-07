@@ -31,8 +31,7 @@ body {
     justify-content: center;
 }
 
-#character-container div {
-    margin: 0 25px;
+#characters {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,13 +65,28 @@ body {
 /* ----------------------- */
 
 
-#taste, #background p, #purpose p {
+#characters p {
+    margin-top: -70px;
     width: 700px;
     text-align: center;
-    margin-left: 28%;
     /* color: #FCF9F2; */
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 24px;
+}
+
+#characters button {
+    margin: 20px 0 50px 0;
+    border: 1px solid #922121;
+    padding: 5px 15px;
+    font-size: 20px;
+    background-color: transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #922121;
+}
+
+#characters button:hover {
+    background-color: #922121;
+    color: #FCF9F2;
 }
 
 
@@ -233,7 +247,7 @@ input[type=submit] {
 #gallery-display {
     margin-left: 450px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; 
     row-gap: 0;
     column-gap: 100px;
 }

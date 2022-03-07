@@ -2,6 +2,8 @@
     Parse.initialize('cVrkrv0qAq90F6K087Atwn2lV4KDBJcNwRgPRmMA', 'oJpekGOaM9kFp9Su3vrAAlH2ZuZVE2ndSACR4ZVz');
     Parse.serverURL = 'https://parseapi.back4app.com/';
 
+    AOS.init();
+
     const body = document.querySelector("body");
 
     const charactersPg = document.getElementById("characters");
