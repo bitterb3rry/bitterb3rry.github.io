@@ -40,10 +40,14 @@
     toMain.addEventListener("click", function(event) {
         event.preventDefault();
 
-        charactersPg.className = "hidden-display";
+        charactersPg.style.display = "none";
+
+        /* charactersPg.className = "hidden-display"; */
         
         header.className = "show-display";
         main.className = "show-display";
+
+        window.scrollTo(0, 0);
 
         body.style.backgroundColor = "#FCF9F2";
         body.style.display = "flex";
@@ -113,6 +117,9 @@
 
     // request to refresh notes 
     refresh.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        window.scrollTo(0, 0);
         refreshNotes();
     })
 
@@ -185,17 +192,12 @@
         }
     }
 
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
     async function displayCards() {
         const notes = Parse.Object.extend('Notes');
         const query = new Parse.Query(notes);
 
         const swatches = ["media/orange-swatch.svg", "media/green-swatch.svg" , "media/yellow-swatch.svg", "media/red-swatch.svg", "media/blue-swatch.svg"];
+        const swatchClasses = ["orange", "green", "yellow", "red", "blue"];
 
         try {
             const results = await query.find();
@@ -211,6 +213,7 @@
                 const swatchNum = setSwatch(flavor);
                 
                 displayCard.innerHTML = `
+                
                     <div class="card-flavor">
                         ${flavor}
                     </div>    
@@ -219,9 +222,8 @@
                         <p>${cardNote}</p>
                     </div>
 
-                    <!-- after every note, add a swatch -->
                     <div class="swatch">
-                        <img src=${swatches[swatchNum]} alt="flavor swatch">
+                        <img src=${swatches[swatchNum]} class=${swatchClasses[swatchNum]} alt="flavor swatch">
                     </div>
                 `;
 
