@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet"/>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <script src="script.js" defer></script>
     <title>flavors of emotion</title>
@@ -60,26 +59,15 @@
             It's part of life that we're supposed to feel a taste of them.
         </p>
 
-        <button id="btn-to-main" >enter</button> <!-- data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600" -->
+        <button id="btn-to-main" >enter</button>
     </div>
 
     <header class="hidden-display">
-        <!-- <h1>Flavors of Emotion</h1> -->
         <img id="title-box" src="./media/color-title-box.svg" alt="title graphic">
         <nav>
             <ul>
                 <li><img id="add-card-btn" src="./media/add-card-btn.svg" alt="click to add a card"></li>
                 <li><img id="about-btn" src="./media/about.svg" alt="click to read about this project"></li>
-                
-                <!-- <li>filter by flavor
-                    <ul>
-                        <li id="fltr-sweet">sweet</li>
-                        <li id="fltr-sour">sour</li>
-                        <li id="fltr-bitter">bitter</li>
-                        <li id="fltr-spicy">spicy</li>
-                        <li id="fltr-salty">salty</li>
-                    </ul>
-                </li> -->
             </ul>
         </nav>
     </header>
@@ -97,7 +85,7 @@
 
                 <label for="note">Note</label>
                 <p>It can be your emotion right now or some emotions that you have been wanting to get out of your system.</p>
-                <textarea id="note" name="note" placeholder="put your emotions here" value="" maxlength="280" required></textarea>
+                <textarea id="note" name="note" placeholder="put your emotions here" maxlength="280" required></textarea>
                 <p id="characters-left"><span id="char-count">280</span>/280 characters</p>
 
                 <select id="flavor" name="flavor" required>
@@ -108,25 +96,6 @@
                     <option value="spicy">spicy</option>
                     <option value="salty">salty</option>
                 </select>
-
-                <!-- <label for="flavor">Choose your flavor (1)</label>
-                <div id="flavor-container">
-                    
-                    <input type="radio" name="sweet" value="sweet">
-                    <label for="sweet">sweet</label>
-                    
-                    <input type="radio"  name="sour" value="sour">
-                    <label for="sour">sour</label>
-                    
-                    <input type="radio" name="bitter" value="bitter">
-                    <label for="bitter">bitter</label>
-                    
-                    <input type="radio" name="salty" value="salty">
-                    <label for="salty">salty</label>
-                    
-                    <input type="radio" name="spicy" value="spicy">
-                    <label for="spicy">spicy</label>
-                </div> -->
             </div>
 
             <input class="button" type="submit" value="Submit Card">

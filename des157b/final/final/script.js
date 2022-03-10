@@ -2,8 +2,6 @@
     Parse.initialize('cVrkrv0qAq90F6K087Atwn2lV4KDBJcNwRgPRmMA', 'oJpekGOaM9kFp9Su3vrAAlH2ZuZVE2ndSACR4ZVz');
     Parse.serverURL = 'https://parseapi.back4app.com/';
 
-    AOS.init();
-
     const body = document.querySelector("body");
 
     const charactersPg = document.getElementById("characters");
@@ -27,22 +25,10 @@
 
     const refresh = document.getElementById("refresh");
 
-    /* opening js */
-/*     const line1 = document.querySelector('#line1');
-    const line2 = document.querySelector('#line2');
-    const line3 = document.querySelector('#line3');
-    const characters = {
-        start: [0, 5, 8],
-        stop: [4, 7, 10],
-        line: [line1, line2, line3]
-    } */
-
     toMain.addEventListener("click", function(event) {
         event.preventDefault();
 
         charactersPg.style.display = "none";
-
-        /* charactersPg.className = "hidden-display"; */
         
         header.className = "show-display";
         main.className = "show-display";
@@ -164,18 +150,6 @@
             console.log('Failed to create new object, with error code: ' + error.message);
         })
     }
-    
-/*     function calcFontSize(len) {
-        if (len <= 70) {
-            return "20px";
-        } else if (len <= 140 ) {
-            return "24px";
-        } else if (len <= 210) {
-            return "28px";
-        } else { ß
-            return "32px";
-        }
-    } */
 
     function setSwatch(flav) {
         switch(flav) {
@@ -226,16 +200,6 @@
                         <img src=${swatches[swatchNum]} class=${swatchClasses[swatchNum]} alt="flavor swatch">
                     </div>
                 `;
-
-                /* vary font size of the words based on length 
-                    - length by getting length of note
-                    - scale it by a base font size
-                    - set that in the css style
-                */
-
-                    /* var len = cardNote.length;
-                    document.calcFontSize(len); */
-
 
                 
                 notesDisplay.append(displayCard);
