@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+
+body {
+    background-color: #F9F9F9;
+    margin: 0;
+}
+
+/* header css */
+header {
+    display: flex;
+    padding: 25px 50px;
+    height: max-content;
+    gap: 50px;
+}
+
+#logo {
+    width: 125px;
+    height: 125px;
+}
+
+/* nav css */
+nav {
+    height: max-content;
+    align-self: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 55px;
+}
+
+nav ul li a {
+    display: inline-block;
+    width: max-content;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'Sanchez', serif;
+    color: #4B68CE; 
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.5em;
+}
+
+/* main css */
+main {
+    margin: auto;
+    width: 80vw;
+    font-family: 'Raleway', sans-serif;
+    color:#4B68CE;
+}
+
+/* footer css */
+
+footer ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    font-family: 'Sanchez', serif;
+}
+
+footer ul li {
+    margin: 0 40px 0 40px;
+}
+
+footer ul li a{
+    color: #4B68CE; 
+}
+
+footer a {
+    text-decoration: none;
+}
+
+/* footer css */
+
+footer {
+    height: 125px;
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,49 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
-
-body {
-    background-color: #F9F9F9;
-}
-
-#body-container {
-    display: flex;
-    flex-direction: row;
-}
-
-/* header css */
-#logo {
-    width: 150px;
-    height: 150px;
-}
-
-/* nav css */
-
-nav ul{
+#proj-container {
     display: flex;
     flex-direction: column;
+    gap: 50px;
 }
 
-nav ul li {
-    margin: 0 0 10px 0;
+.project {
+    margin: auto;
+    width: 1366px;
+    height: 300px;
+    background-color: grey;
 }
 
-nav ul li a {
-    font-size: 24px;
-}
-
-/* main css */
-
-main {
-    width: 80vw;
-    height: 60vh;
-    margin-left: 75px;
-    padding-top: 155px;
-    font-family: 'Raleway', sans-serif;
-    color:#4B68CE;
-    overflow: scroll;
-    scrollbar-width: none;
-}
-
-#proj-container {
+/* #proj-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -59,8 +27,8 @@ main {
 }
 
 section {
-    width: 500px;
-    height: 270px;  
+    width: 600px;
+    height: 371px;  
     
 }
 
@@ -74,13 +42,18 @@ section:hover {
     cursor: pointer;
 }
 
+#fs section{
+    background-image: url('./images/icons/fs.png');
+    background-size: cover;
+}
+
 #blockbuster-video section{
-    background-image: url('./images/works/blockbuster.png');
+    background-image: url('./images/icons/blockbuster.png');
     background-size: cover;
 }
 
 #magic-hour section {
-    background-image: url('./images/works/magic-hour.png');
+    background-image: url('./images/icons/magic-hour.png');
     background-size: cover;
 }
 
@@ -120,38 +93,4 @@ article p {
     font-size: 16px;
 }
 
-/* footer css */
-
-ul {
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    font-family: 'Sanchez', serif;
-}
-
-ul li {
-    margin: 0 40px 0 40px;
-}
-
-ul li a{
-    color: #4B68CE; 
-}
-
-a {
-    text-decoration: none;
-}
-
-/* footer css */
-
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#icons {
-    width: 200px;
-    margin: 15px 0 5px 0;
-    display: flex;
-    justify-content: space-between;
-}
+ */
