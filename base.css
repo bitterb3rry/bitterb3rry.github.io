@@ -6,6 +6,24 @@ body {
     margin: 0;
 }
 
+header {
+    display: flex;
+    padding: 30px 30px;
+    height: max-content;
+    justify-content: space-between;
+}
+
+#hamburger {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+}
+
+#full-nav {
+    display: none;
+}
+
 nav {
     height: max-content;
     align-self: center;
@@ -64,19 +82,25 @@ footer ul li a{
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+    
+    #full-nav {
+        display: block;
+    }
+    
     /* header css */
     header {
-        display: flex;
         padding: 25px 50px;
-        height: max-content;
         gap: 50px;
+        justify-content: unset;
     }
 
     #logo {
         width: 125px;
         height: 125px;
     }
-
 
     /* nav css */
 
