@@ -8,8 +8,10 @@
 .project .image {
     width: 100%;
     height: 100%;
+    position: relative;
     background-color: lightgrey;
     border-radius: 20px;
+    z-index: -1;
 }
 
 .project .title {
@@ -22,6 +24,7 @@
     border-radius: 20px;
     background-color: white;
     text-align: center;
+    z-index: -1;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

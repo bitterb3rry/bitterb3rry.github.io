@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
 
+@keyframes menuUp {
+    0%{
+        margin-top: 0px;
+    } 100% {
+        margin-top: -400px;
+    }
+}
+
+@keyframes menuDown {
+    0%{
+        margin-top: -400px;
+    } 100% {
+        margin-top: 0px;
+    }
+}
 
 body {
     background-color: #f0f0f0;
@@ -7,10 +22,13 @@ body {
 }
 
 header {
+    margin: auto;
     display: flex;
-    padding: 30px 30px;
-    height: max-content;
+    width: 80vw;
+    padding-top: 25px;
+    height: 125px;
     justify-content: space-between;
+    align-items: center;
 }
 
 #hamburger {
@@ -24,12 +42,41 @@ header {
     display: none;
 }
 
+#mobile-nav {
+    position: absolute;
+    z-index: 1;
+}
+
+#mobile-nav nav {
+    background-color: #e0e0e0;
+    width: 100vw;
+    height: 350px;
+    padding-left: 30px;
+    padding-top: 35px;
+    border-radius: 0 0 35% 35%;
+    padding-left: 30px;
+}
+
+#mobile-nav nav ul li {
+    margin-bottom: 20px;
+}
+
+#close-hamburger {
+    margin: 20px 0;
+    position: relative;
+    left: 75%;
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+}
+
 nav {
     height: max-content;
     align-self: center;
 }
 
 nav ul {
+    margin: 0;
     list-style: none;
     gap: 20px;
 }
@@ -82,13 +129,13 @@ footer ul li a{
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    #hamburger {
+    #hamburger, #mobile-nav {
         display: none;
     }
     
     #full-nav {
         display: block;
-    }
+    } 
     
     /* header css */
     header {
