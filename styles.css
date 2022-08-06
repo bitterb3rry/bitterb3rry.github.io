@@ -1,7 +1,7 @@
 .project {
     position: relative;
     margin: auto auto 50px auto;
-    min-width: 250px;
+    min-width: 300px;
     max-width: 550px;
     aspect-ratio: 5/3;
 }
@@ -26,6 +26,13 @@
     background-color: white;
     text-align: center;
     z-index: -1;
+}
+
+#play {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -62,6 +69,10 @@
     .left .title {
         left: 450px;
         bottom: 200px;
+    }
+
+    #play {
+        max-width: 1200px;
     }
 }
 

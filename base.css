@@ -98,7 +98,7 @@ nav ul li a:hover {
 
 /* main css */
 main {
-    margin: auto;
+    margin: 35px auto auto auto;
     width: 80vw;
     font-family: 'Raleway', sans-serif;
     color:#4B68CE;
