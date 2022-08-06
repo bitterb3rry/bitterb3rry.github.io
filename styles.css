@@ -1,5 +1,6 @@
 .project {
-    margin: auto;
+    position: relative;
+    margin: auto auto 50px auto;
     min-width: 250px;
     max-width: 550px;
     aspect-ratio: 5/3;
@@ -36,19 +37,48 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .project .image {
-        
-    }
+
+
+    
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .right {
+        left: 20%;
 
+    }
+
+    .left {
+        right: 20%;
+
+    }
+
+    .right .title {
+        left: -250px;
+        bottom: 200px;
+    }
+
+    .left .title {
+        left: 450px;
+        bottom: 200px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
+}
+
+@media only screen and (min-width: 1400px) {
+    .right {
+        left: 350px;
+        
+    }
+
+    .left {
+        right: 350px;
+    }
 }
 
 /* #proj-container {
