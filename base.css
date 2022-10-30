@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     margin: 0;
 }
 
@@ -101,7 +101,11 @@ main {
     margin: 35px auto auto auto;
     width: 80vw;
     font-family: 'Raleway', sans-serif;
-    color:#4B68CE;
+    color:#343546;
+}
+
+h1, h2 {
+    color: #4B68CE; 
 }
 
 /* footer css */
@@ -161,10 +165,27 @@ footer ul li a{
         width: 80vw;
     }
 
+    h3 {
+        line-height: 25px;
+    }
+
+    p {
+        padding-left: 2em;
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    ul {
+        padding-left: 3em;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
     /* footer css */
     footer {
         height: 125px;
         padding-top: 75px;
+        padding-left: 60px;
     }
 
     footer ul {
