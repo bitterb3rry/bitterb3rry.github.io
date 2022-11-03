@@ -170,7 +170,6 @@ footer ul li a{
     }
 
     p {
-        padding-left: 2em;
         font-size: 20px;
         line-height: 30px;
     }
@@ -185,7 +184,6 @@ footer ul li a{
     footer {
         height: 125px;
         padding-top: 75px;
-        padding-left: 60px;
     }
 
     footer ul {
