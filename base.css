@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: #f9fce5;
+    background-color: #fefff5;
     margin: 0;
 }
 
@@ -45,10 +45,11 @@ header {
 #mobile-nav {
     position: absolute;
     z-index: 1;
+    display: none;
 }
 
 #mobile-nav nav {
-    background-color: #e0e0e0;
+    background-color: #fafddf;
     width: 100vw;
     height: 350px;
     padding-left: 30px;
