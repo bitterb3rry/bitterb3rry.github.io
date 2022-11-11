@@ -105,7 +105,12 @@ main {
     color:#343546;
 }
 
-h1, h2 {
+h1 {
+    color: #343546;
+    font-family: 'Sanchez', serif;
+}
+
+h2 {
     color: #4B68CE; 
 }
 
