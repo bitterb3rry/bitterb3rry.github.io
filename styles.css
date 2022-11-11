@@ -62,16 +62,10 @@
     width: 150px;
 }
 
-/* #reno {
-    margin: 100px 0 100px 0;
-    text-align: center;
-} */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    /* .project .title {
-        left: 15%;
-    } */
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -88,29 +82,6 @@
     #about img {
         width: 300px;
     }
-/*     .right {
-        left: 20%;
-
-    }
-
-    .left {
-        right: 20%;
-
-    }
-
-    .right .title {
-        left: -250px;
-        bottom: 200px;
-    }
-
-    .left .title {
-        left: 450px;
-        bottom: 200px;
-    }
-
-    #play {
-        max-width: 1200px;
-    } */
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -119,96 +90,5 @@
 }
 
 @media only screen and (min-width: 1400px) {
-    /* .right {
-        left: 350px;
-        
-    }
 
-    .left {
-        right: 350px;
-    } */
 }
-
-/* #proj-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.project {
-    height: 360px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    margin: 30px;
-    align-items: center;
-}
-
-section {
-    width: 600px;
-    height: 371px;  
-    
-}
-
-#coming {
-    margin-top: -50px;
-    margin-left: 37%;
-    font-size: 24px;
-}
-
-section:hover {
-    cursor: pointer;
-}
-
-#fs section{
-    background-image: url('./images/icons/fs.png');
-    background-size: cover;
-}
-
-#blockbuster-video section{
-    background-image: url('./images/icons/blockbuster.png');
-    background-size: cover;
-}
-
-#magic-hour section {
-    background-image: url('./images/icons/magic-hour.png');
-    background-size: cover;
-}
-
-article {
-    max-width: 300px;
-    margin-top: 100px;
-    padding: 10px 20px 10px 20px;
-    border: 1px solid black;
-    border-radius: 48%;
-    background-color: #F9F9F9;
-    text-align: center;
-}
-
-@keyframes articleUp {
-    0%{
-        margin-top: 100px;
-    } 100% {
-        margin-top: -50px;
-    }
-}
-
-@keyframes articleDown {
-    0%{
-        margin-top: -50px;
-    } 100% {
-        margin-top: 1000px;
-    }
-}
-
-article h1 {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-article p {
-    color: black;
-    font-size: 16px;
-}
-
- */
