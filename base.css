@@ -212,4 +212,8 @@ footer ul li a{
         max-width: 1200px;
         margin: auto;
     }
+
+    main {
+        width: 1200px;
+    }
 }
