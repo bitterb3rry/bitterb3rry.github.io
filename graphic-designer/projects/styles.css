@@ -65,6 +65,17 @@
     width: 900%;
 }
 
+.before-next {
+    margin: 50px 0 0px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.before-next a {
+    color: #33442E;
+    font-size: 20px;
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     #bear-gallery {
