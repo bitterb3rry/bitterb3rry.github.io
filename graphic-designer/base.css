@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+}
+
+header {
+    margin: auto;
+    display: flex;
+    width: 80vw;
+    padding-top: 25px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#hamburger {
+    display: block;
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+}
+
+#full-nav {
+    display: none;
+}
+
+#mobile-nav {
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+#mobile-nav nav {
+    background-color: #fafddf;
+    width: 100vw;
+    height: 350px;
+    padding-left: 30px;
+    padding-top: 35px;
+    border-radius: 0 0 35% 35%;
+    padding-left: 30px;
+}
+
+#mobile-nav nav ul li {
+    margin-bottom: 20px;
+}
+
+#close-hamburger {
+    margin: 20px 0;
+    position: relative;
+    left: 75%;
+    border: none;
+    background-color: transparent;
+    font-size: 28px;
+}
+
+nav {
+    height: max-content;
+    align-self: center;
+}
+
+nav ul {
+    margin: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+a {
+    display: inline-block;
+    width: max-content;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: 'Sanchez', serif;
+    color: #6A7966; 
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.5em;
+}
+
+/* main css */
+main {
+    margin: 35px auto auto auto;
+    width: 80vw;
+    font-family: 'Raleway', sans-serif;
+    color:#6A7966;
+}
+
+h1 {
+    color: #3C4639;
+    font-family: 'Sanchez', serif;
+    /* border-bottom: #3C4639 3px solid;
+    padding-bottom: 10px;
+    width: max-content; */
+}
+
+h2 {
+    color: #6A7966;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 18px;
+    font-family: 'Sanchez', serif;
+}
+
+h3 {
+    color: #3C4639;
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    color: #4E5A4B;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    line-height: 25px;
+}
+
+img {
+    margin: 10px 0 10px 0;
+}
+
+#about div {
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    flex-direction: column-reverse;
+}
+
+#about img{
+    margin:0 150px 0 80px;
+    border-radius: 50%;
+    width: 150px;
+}
+
+/* footer css */
+
+footer ul {
+    margin: 50px 0 50px 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    font-family: 'Sanchez', serif;
+}
+
+footer ul li a{
+    color: #33442E; 
+    text-decoration: none;
+}
+
+#bar {
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(45deg, #FFEEEE, #8BB481);
+    position: absolute;
+    left: 0;
+}
+
+@media only screen and (min-width: 576px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    #hamburger, #mobile-nav {
+        display: none;
+    }
+    
+    #full-nav {
+        display: block;
+    } 
+
+    #logo {
+        width: 125px;
+        height: 125px;
+    }
+
+    /* nav css */
+
+    nav ul {
+        display: flex;
+        gap: 55px;
+    }
+
+    /* main css */
+    main {
+        width: 80vw;
+    }
+
+    h2 {
+        text-align: right;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+        line-height: 33px;
+        width: 70%;
+    }
+    
+    ul {
+        padding-left: 3em;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    /* footer css */
+
+    footer ul {
+        margin: 70px 0 25px 0;
+        flex-direction: row;
+    }
+
+    footer ul li {
+        margin: 0 40px 0 40px;
+    }
+
+    footer ul li a {
+        font-size: 18px;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+
+    p {
+        width: 50%;
+    }
+
+    #about div {
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    #about img {
+        width: 300px;
+        height: fit-content;
+    }
+
+    #about-footer {
+        position: absolute;
+    }
+    
+    #about-footer ul{
+        padding: 0;
+        margin-left: -38px;
+    }
+
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    header {
+        width: 100%;
+    }
+    
+    body {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    main {
+        width: 1200px;
+    }
+}
