@@ -1,56 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>designer: julia ma</title>
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/png" href="./media/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./media/favicon/favicon-32x32.png" sizes="32x32">
+  </head>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <!-- <link href="reset.css" rel="stylesheet"> -->
-    <link href="../base.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js" defer></script>
-    <script src="https://kit.fontawesome.com/b991f6b582.js" crossorigin="anonymous"></script>
+  <body>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap" rel="stylesheet"> 
-
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
-    
-    <title>julia's portfolio</title>
-</head>
-
-<body>
-    <div id="mobile-nav">
-        <nav>
-            <button id="close-hamburger"><i class="fa-solid fa-xmark"></i></i></button>
-            <ul>
-                <li><a href="../index.html">projects</a></li>
-                <li><a href="../play.html">play</a></li>
-                <li><a href="../about.html">about me</a></li>
-            </ul>
-        </nav>
-    </div>
     <header> 
-        <a href="../index.html"><img id="logo" src="../images/logo.svg" alt="logo"></a>
-        <button id="hamburger"><i class="fa-solid fa-bars"></i></button>
-        <nav id="full-nav">
-            <ul>
-                <li><a href="../index.html">projects</a></li>
-                <li><a href="../play.html">play</a></li>
-                <li><a href="../about.html">about me</a></li>
-            </ul>
+        <a href="../index.html"><img id="logo" src="../media/logo.svg" alt="logo"></a>
+        <nav>
+            <a href="../about.html">about me</a>
         </nav>
     </header>
 
     <main>
-
-        <h1>ArtrSpace</h1>
-        <h3>Ongoing<br>Team: Yishan Luo, Leilia Lin, Elaine Lin<br>Role: UI Designer</h3>
+        <div class="project-title">
+            <h1>ArtrSpace</h1>
+            <h2>UI Design<br>Team: Yishan Luo, Leilia Lin, Elaine Lin<br>On-going</h2>
+        </div>
 
         <p style="padding-left: 0;">
             ArtrSpace is a concept web app design for a 3rd-party digital art commissioning platform providing a secure, artist-friendly, and exploratory marketplace for artists and patrons.
@@ -65,14 +40,15 @@
         <h2>User Research</h2>
         
         <p>
-            The team and I had conducted interviews to better understand and empathize with active artists who use social media as a commission platform.
+            The team and I had conducted interviews to better understand and empathized with active artists who use social media as commission platform. 
         </p>
             
         <h2>Target Audiences</h2>
 
         <h3>Primary Target Audience: Art Patrons</h3>
         <p> 
-            Art patrons are those who are looking for an artist to commission a piece of work that is catered to the needs of the patron. Patrons may be looking for a specific art style, price range, and/or expertise. Patrons are primary because artists usually has to use social media as a place to build a client base and advertise for their work.        </p>
+            Art patrons are those who are looking for an artist to commission a piece of work that is catered to the needs of the patron. Patrons may be looking for a specifc art style, price range, and/or expertise. Patrons are primary because artists usually has to use social media as a place to build a client base and advertise for their work. 
+        </p>
         
         <h3">Secondary Target Audience: Artists</h3>
         <p>
@@ -82,25 +58,27 @@
         <h2>Basic Goals:</h2>
         <ul>
             <li>For art patrons ArtrSpace as their go-to search tool for their artwork needs.</li>
-            <li>Help artists by providing a platform for them to efficiently receive, find, and promote their art commissions.</li>
+            <li>Help artists by providing a platform for them to effciently receive, find, and promote their art commissions.</li>
         </ul>
         
         <p>To meet these goals, the designs of the main page and artist profiles are made with the audiences in mind. </p>
-        <img src="../images/works/artrspace-mockups.png" width="100%" alt="artrspace project mockups">
-
-        <h3>Next steps</h3>
-        <p>As this is an ongoing project, next I will be exploring how designs that will continue that will contribute to the goals in a artists explore page and a job listing page.</p>
+        <img src="../media/projects/artrspace-mockups.png" width="100%" alt="artrspace project mockups">
+        
     </main>
-    
 
     <footer id="footer">
         <ul>
             <li><a href="mailto:&#106;&#117;&#108;&#109;&#097;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">email</a></li>
-            <li><a href="https://github.com/julxma">github: julxma</a></li>
             <li><a href="https://www.linkedin.com/in/julxma/">linkedin</a></li>
             <li><a href="https://drive.google.com/file/d/1w29TL6US1UjC0czyD9t7MisMqWifMAC7/view?usp=sharing">resume</a></li>
+            <li><a href="https://github.com/julxma">github: julxma</a></li>
         </ul>
+        
+        <div id="bar"></div>
     </footer>
-</body>
+
+    <script src="index.js"></script>
+
+  </body>
 
 </html>

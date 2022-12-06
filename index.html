@@ -1,74 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>designer: julia ma</title>
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" type="image/png" href="./media/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./media/favicon/favicon-32x32.png" sizes="32x32">
+  </head>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
-    <!-- <link href="reset.css" rel="stylesheet"> -->
-    <link href="base.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js" defer></script>
-    <script src="https://kit.fontawesome.com/b991f6b582.js" crossorigin="anonymous"></script>
+  <body>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Righteous&display=swap" rel="stylesheet"> 
-
-    <link rel="icon" type="image/png" href="./images/favicon/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="./images/favicon/favicon-32x32.png" sizes="32x32">
-
-    <title>julia's portfolio</title>
-</head>
-
-<body>
-    <div id="mobile-nav">
-        <nav>
-            <button id="close-hamburger"><i class="fa-solid fa-xmark"></i></i></button>
-            <ul>
-                <li><a href="index.html">projects</a></li>
-                <li><a href="play.html">play</a></li>
-                <li><a href="about.html">about me</a></li>
-            </ul>
-        </nav>
-    </div>
     <header> 
-        <a href="index.html"><img id="logo" src="./images/logo.svg" alt="logo"></a>
-        <button id="hamburger"><i class="fa-solid fa-bars"></i></button>
-        <nav id="full-nav">
-            <ul>
-                <li><a href="index.html">projects</a></li>
-                <li><a href="play.html">play</a></li>
-                <li><a href="about.html">about me</a></li>
-            </ul>
+        <a href="./index.html"><img id="logo" src="./media/logo.svg" alt="logo"></a>
+        <nav>
+            <a href="./about.html">about me</a>
         </nav>
     </header>
 
     <main>
-        <h1 style="padding:50px 0;">
-            Hi, I’m Julia, a designer creating visual experiences with the audience at the center! Welcome to my design portfolio ☺
-        </h1>
+        <h1 id="tagline">Hi, I’m Julia, a designer creating visual experiences through design! Welcome to my design portfolio ☺</h1>  
+
+        <section id="gallery"> <!-- flex responsive -->
+            <a class="thumbnail" id="fads" href="./projects/fads.html"> <!-- background is the image, when hover - shows a title and arrow to indicate 'enter' -->
+                <img src="./media/thumbnails/prism.png" alt="fads design thumbnail">
+            </a>
+            <a class="thumbnail" id="news" href="./projects/news.html"> 
+              <img src="./media/thumbnails/news.png" alt="NEWS design thumbnail">
+            </a>
+            <a class="thumbnail" id="book" href="./projects/rand-book.html"> 
+              <img src="./media/thumbnails/book.png" alt="book design thumbnail">
+            </a>
+            <a class="thumbnail" id="magic-hr" href="./projects/magic-hour.html"> 
+              <img src="./media/thumbnails/magic-hr.png" alt="magic hour thumbnail">
+            </a>
+            <a class="thumbnail" id="glaciers" href="./projects/glaciers.html"> 
+              <img src="./media/thumbnails/glacier.png" alt="glaciers motion graphic thumbnail">
+            </a>
+            <a class="thumbnail" id="blobboi" href="./projects/blobboi.html"> 
+              <img src="./media/thumbnails/blobboi.png" alt="blobboi game thumbnail">
+            </a>
+            <a class="thumbnail" id="gummi" href="./projects/gummy-bears.html"> 
+              <img src="./media/thumbnails/gummi.png" alt="gummy bear thumbnail">
+            </a>
+            <!-- <a class="thumbnail" id="artrspace" href="./projects/artrspace.html"> 
+              <img src="./media/thumbnails/artr.png" alt="artrspace thumbnail">
+            </a> -->
+        </section>
         
-        <div id="projects">
-            <a href="./projects/pantry.html">ASUCD Pantry Web App Redesign</a>
-            <a href="./projects/artrspace.html">ArtrSpace</a>
-            <a href="./projects/fads.html">UC Davis 2022 Fashion Show</a>
-            <a href="./projects/interactive-media.html">Interactive Website Experiments</a>
-        </div>
     </main>
-    
 
     <footer id="footer">
         <ul>
             <li><a href="mailto:&#106;&#117;&#108;&#109;&#097;&#064;&#117;&#099;&#100;&#097;&#118;&#105;&#115;&#046;&#101;&#100;&#117;">email</a></li>
-            <li><a href="https://github.com/julxma">github: julxma</a></li>
             <li><a href="https://www.linkedin.com/in/julxma/">linkedin</a></li>
             <li><a href="https://drive.google.com/file/d/1w29TL6US1UjC0czyD9t7MisMqWifMAC7/view?usp=sharing">resume</a></li>
+            <li><a href="https://github.com/julxma">github: julxma</a></li>
         </ul>
-    </footer>
-</body>
 
+        <div id="bar"></div>
+    </footer>
+    
+    <script src="index.js"></script>
+
+  </body>
+  
 </html>

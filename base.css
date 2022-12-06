@@ -1,23 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Sanchez&display=swap');
-
-@keyframes menuUp {
-    0%{
-        margin-top: 0px;
-    } 100% {
-        margin-top: -400px;
-    }
-}
-
-@keyframes menuDown {
-    0%{
-        margin-top: -400px;
-    } 100% {
-        margin-top: 0px;
-    }
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 body {
-    background-color: #fefff5;
+    background-color: #ffffff;
     margin: 0;
 }
 
@@ -26,9 +11,8 @@ header {
     display: flex;
     width: 80vw;
     padding-top: 25px;
-    height: 125px;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 
 #hamburger {
@@ -82,16 +66,16 @@ nav ul {
     gap: 20px;
 }
 
-nav ul li a {
+a {
     display: inline-block;
     width: max-content;
     font-size: 24px;
     text-decoration: none;
     font-family: 'Sanchez', serif;
-    color: #4B68CE; 
+    color: #6A7966; 
 }
 
-nav ul li a:hover {
+a:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
     text-underline-offset: 0.5em;
@@ -102,25 +86,58 @@ main {
     margin: 35px auto auto auto;
     width: 80vw;
     font-family: 'Raleway', sans-serif;
-    color:#343546;
+    color:#6A7966;
 }
 
 h1 {
-    color: #343546;
+    color: #3C4639;
     font-family: 'Sanchez', serif;
+    /* border-bottom: #3C4639 3px solid;
+    padding-bottom: 10px;
+    width: max-content; */
 }
 
 h2 {
-    color: #4B68CE; 
+    color: #6A7966;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 18px;
+    font-family: 'Sanchez', serif;
+}
+
+h3 {
+    color: #3C4639;
+    font-family: 'Lato', sans-serif;
+}
+
+p {
+    color: #4E5A4B;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    line-height: 25px;
+}
+
+img {
+    margin: 10px 0 10px 0;
+}
+
+#about div {
+    display: flex;
+    flex-direction: column;
+    flex: wrap;
+    flex-direction: column-reverse;
+}
+
+#about img{
+    margin:0 150px 0 80px;
+    border-radius: 50%;
+    width: 150px;
 }
 
 /* footer css */
-footer {
-    height: 100px;
-    padding-top: 25px;
-}
 
 footer ul {
+    margin: 50px 0 50px 0;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -129,8 +146,16 @@ footer ul {
 }
 
 footer ul li a{
-    color: #4B68CE; 
+    color: #33442E; 
     text-decoration: none;
+}
+
+#bar {
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(45deg, #FFEEEE, #8BB481);
+    position: absolute;
+    left: 0;
 }
 
 @media only screen and (min-width: 576px) {
@@ -146,13 +171,6 @@ footer ul li a{
     #full-nav {
         display: block;
     } 
-    
-    /* header css */
-    header {
-        padding: 25px 0;
-        gap: 50px;
-        justify-content: unset;
-    }
 
     #logo {
         width: 125px;
@@ -171,13 +189,18 @@ footer ul li a{
         width: 80vw;
     }
 
+    h2 {
+        text-align: right;
+    }
+
     h3 {
-        line-height: 25px;
+        font-size: 24px;
     }
 
     p {
         font-size: 20px;
-        line-height: 30px;
+        line-height: 33px;
+        width: 70%;
     }
     
     ul {
@@ -187,12 +210,9 @@ footer ul li a{
     }
 
     /* footer css */
-    footer {
-        height: 125px;
-        padding-top: 75px;
-    }
 
     footer ul {
+        margin: 70px 0 25px 0;
         flex-direction: row;
     }
 
@@ -200,14 +220,47 @@ footer ul li a{
         margin: 0 40px 0 40px;
     }
 
+    footer ul li a {
+        font-size: 18px;
+    }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    
+
+    p {
+        width: 50%;
+    }
+
+    #about div {
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    #about img {
+        width: 300px;
+        height: fit-content;
+    }
+
+    #about-footer {
+        position: absolute;
+    }
+    
+    #about-footer ul{
+        padding: 0;
+        margin-left: -38px;
+    }
 
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
+    header {
+        width: 100%;
+    }
+    
     body {
         max-width: 1200px;
         margin: auto;
