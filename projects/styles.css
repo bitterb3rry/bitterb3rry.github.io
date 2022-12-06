@@ -89,19 +89,6 @@
     width: 900%;
 }
 
-#book-mockup1 {
-    margin-left: 52%;
-}
-
-#book-mockup2 {
-    margin-top: -15%;
-}
-
-#book-mockup3 {
-    margin-left: 52%;
-    margin-top: -15%;
-}
-
 .before-next {
     margin: 50px 0 0px 0;
     display: flex;
@@ -146,15 +133,18 @@
         width: 50%;
     }
 
+    #book-mockup1 {
+        margin-left: 52%;
+    }
+    
     #book-mockup2 {
+        margin-top: -15%;
+    }
+    
+    #book-mockup3 {
         margin-left: 52%;
         margin-top: -15%;
     }
-
-    #book-mockup3 {
-        margin-top: -15%;
-    }
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
