@@ -4,27 +4,32 @@
     justify-content: space-between;
 }
 
-#fads-button {
+#fads-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#fads-buttons button{
     width: fit-content;
     border: 1px solid black;
     background: transparent;
     padding: 20px 20px 15px 20px;
     display: block;
-    margin: 25px auto 0 auto;
+    margin: 25px auto 20px auto;
 }
 
-#fads-button:hover {
+#fads-buttons button:hover {
     border: 1px solid transparent;
     background: linear-gradient(50deg, #EAA0F0 0%, #CB91E5 100%);
 }
 
-#fads-button a {
+#fads-buttons button a {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 18px;
     color: black;
 }
 
-#fads-button a:hover {
+#fads-buttons button a:hover {
     text-decoration: none;
 }
 
