@@ -4,7 +4,31 @@
     justify-content: space-between;
 }
 
-#gummy-cover, #blobboi img, #blobboi-button, #glacier video {
+#fads-button {
+    width: fit-content;
+    border: 1px solid black;
+    background: transparent;
+    padding: 20px 20px 15px 20px;
+    display: block;
+    margin: 25px auto 0 auto;
+}
+
+#fads-button:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(50deg, #EAA0F0 0%, #CB91E5 100%);
+}
+
+#fads-button a {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+#fads-button a:hover {
+    text-decoration: none;
+}
+
+#blobboi img, #blobboi-button, #glacier video, #gummy-cover {
     display: block;
     margin: auto;
 }
